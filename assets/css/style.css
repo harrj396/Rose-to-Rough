@@ -4,4 +4,6 @@ nav {
 
 nav a {
     color: #B82A23 !important;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px !important;
 }

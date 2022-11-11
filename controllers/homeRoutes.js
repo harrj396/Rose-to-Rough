@@ -27,15 +27,23 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/post/:id', async (req, res) => {
+// GET one post
+// Use the custom middleware before allowing the 
+// user to access the posts
+router.get('/post/:id', withAuth, async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
         {
           model: User,
-          attributes: ['name'],
-        },
-      ],
+          attributes: [
+          'id',
+          'name',
+          'description',
+          'date_created',
+        ],
+      },
+    ]
     });
 
     const project = postData.get({ plain: true });

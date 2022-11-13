@@ -12,7 +12,12 @@ nav a {
     font-family: 'Montserrat', sans-serif;
     font-size: 30px !important;
 }
-/* .bgimage {
-    
-    opacity: 70%;
-} */
+.bg-image {
+ position: static;
+
+}
+
+button {
+    position: relative;
+    align-items: center;
+}

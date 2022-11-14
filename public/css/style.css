@@ -19,14 +19,12 @@ nav a {
 .the-image {
     background-image: url("../images/grapes-and-wine.jpg");
     background-repeat: no-repeat;
-    
-.bg-image {
-    position: static;
 }
 
 #review {
     padding: 15px;
     font-size: 30px;
+    margin-top: 21vh;
 }
 
 .form-group {

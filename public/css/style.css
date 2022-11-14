@@ -7,12 +7,7 @@ nav a {
     font-family: 'Oswald', sans-serif;
     font-size: 30px !important;
 }
+
 .bg-image {
- position: static;
-
-}
-
-button {
-    position: relative;
-    align-items: center;
+    position: static;
 }

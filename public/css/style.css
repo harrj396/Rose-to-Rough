@@ -1,6 +1,7 @@
 body {
     color: #B82A23 !important;
     font-family: 'Montserrat', sans-serif !important;
+
 }
 
 nav {
@@ -13,6 +14,8 @@ nav a {
     font-size: 30px !important;
 }
 
-.bg-image {
-    position: static;
+.the-image {
+    background-image: url("../images/grapes-and-wine.jpg");
+    background-repeat: no-repeat;
+    
 }

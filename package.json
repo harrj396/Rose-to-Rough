@@ -15,9 +15,9 @@
     "express-handlebars": "^6.0.6",
     "express-session": "^1.17.3",
     "mysql2": "^2.3.3",
+    "npx": "^10.2.2",
     "sequelize": "^6.25.5",
-    "npx": "^10.2.2"
-    
+    "sequelize-cli": "^6.5.2"
   },
   "scripts": {
     "start": "node server.js",

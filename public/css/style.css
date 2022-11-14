@@ -15,8 +15,7 @@ nav a {
 }
 
 .bg-image {
- position: static;
-opacity: 80%;
+    position: static;
 }
 
 #review {

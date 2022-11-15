@@ -40,3 +40,8 @@ h1 {
 h5 {
     font-family: 'Playfair Display', serif;
 }
+
+.nav.github.mt-3 {
+    margin-top: 30vh;
+
+}

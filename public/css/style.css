@@ -1,9 +1,7 @@
 body {
     color: #B82A23 !important;
     font-family: 'Montserrat', sans-serif !important;
-
-    background-color: #D1BBBA !important;
-
+    background-image: url("../images/grapes-and-wine.jpg");   
 }
 
 nav {
@@ -14,12 +12,6 @@ nav a {
     color: #B82A23 !important;
     font-family: 'Playfair Display', serif;
     font-size: 30px !important;
-}
-
-.the-image {
-    background-image: url("../images/grapes-and-wine.jpg");
-
-    
 }
 
 #review {

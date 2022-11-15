@@ -38,10 +38,6 @@ Review.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    taster_twitter_handle: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
     title: {
       type: DataTypes.STRING,
       allowNull: false,

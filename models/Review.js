@@ -16,7 +16,7 @@ Review.init(
     },
     designation: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     points: {
       type: DataTypes.INTEGER,
@@ -32,7 +32,7 @@ Review.init(
     },
     region_1: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     taster_name: {
       type: DataTypes.STRING,
@@ -40,7 +40,7 @@ Review.init(
     },
     taster_twitter_handle: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     title: {
       type: DataTypes.STRING,

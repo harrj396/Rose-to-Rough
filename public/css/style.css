@@ -18,13 +18,19 @@ nav a {
 
 .the-image {
     background-image: url("../images/grapes-and-wine.jpg");
-    background-repeat: no-repeat;
+
+    
 }
 
 #review {
     padding: 15px;
     font-size: 30px;
     margin-top: 27vh;
+}
+
+#reviews {
+    display: flex;
+    align-items: center;
 }
 
 .form-group {
@@ -39,6 +45,10 @@ h1 {
 
 h5 {
     font-family: 'Playfair Display', serif;
+}
+
+.h1s {
+    margin-left: 9vw;
 }
 
 .git {

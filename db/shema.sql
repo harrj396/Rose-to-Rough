@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS wine_db;
-CREATE DATABASE wine_db;
+DROP DATABASE IF EXISTS winetest_db;
+CREATE DATABASE winetest_db;

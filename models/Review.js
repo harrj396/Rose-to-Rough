@@ -34,6 +34,14 @@ Review.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    taster_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    taster_twitter_handle: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     title: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -53,13 +61,6 @@ Review.init(
         key: 'id',
       },
     },
-    // review_id: {
-    //     type: DataTypes.INTEGER,
-    //     references: {
-    //       model: 'review',
-    //       key: 'id',
-    //     },
-    //   },
   },
   {
     sequelize,

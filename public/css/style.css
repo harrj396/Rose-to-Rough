@@ -24,7 +24,7 @@ nav a {
 #review {
     padding: 15px;
     font-size: 30px;
-    margin-top: 21vh;
+    margin-top: 27vh;
 }
 
 .form-group {
@@ -41,7 +41,6 @@ h5 {
     font-family: 'Playfair Display', serif;
 }
 
-.nav.github.mt-3 {
-    margin-top: 30vh;
-
+.git {
+    margin-top: 21vh;
 }

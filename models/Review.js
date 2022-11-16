@@ -1,5 +1,4 @@
 const { Model, DataTypes } = require('sequelize');
-const { Post } = require('.');
 const sequelize = require('../config/connection');
 
 class Review extends Model {}
@@ -37,10 +36,6 @@ Review.init(
     taster_name: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    taster_twitter_handle: {
-      type: DataTypes.STRING,
-      allowNull: true,
     },
     title: {
       type: DataTypes.STRING,

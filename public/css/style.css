@@ -6,7 +6,7 @@ body {
 
 nav {
     background-color:aliceblue;
-    /* border-radius: 10px; */
+    border-radius: 10px;
 }
 
 nav a {
@@ -18,6 +18,8 @@ nav a {
 #review {
     padding: 15px;
     font-size: 30px;
+    margin-left: 40vw;
+    margin-top: 24vh;
 }
 
 .form-group {
@@ -32,4 +34,8 @@ h1 {
 
 h5 {
     font-family: 'Playfair Display', serif;
+}
+
+#aaa {
+    margin-bottom: 12vh;
 }

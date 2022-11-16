@@ -16,6 +16,7 @@ const comments = [
       'There is a difference between authentication and authorization. Authentication menas confirming your own identity'
   },
 ];
+
 router.get('/', (req, res) => {
   // find all reviews
   // be sure to include its associated Products
@@ -36,6 +37,7 @@ router.get('/:id', (req, res) => {
       res.json(reviewData);
     });
 });
+
 // Creater a new review
 router.post('/', withAuth, async (req, res) => {
   try {

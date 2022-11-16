@@ -1,27 +1,20 @@
 body {
     color: #B82A23 !important;
     font-family: 'Montserrat', sans-serif !important;
-    background-image: url("../images/grapes-and-wine.jpg");   
+    
+    background-color: #D1BBBA !important;
+
 }
 
 nav {
     background-color:aliceblue;
+    /* border-radius: 10px; */
 }
 
 nav a {
     color: #B82A23 !important;
     font-family: 'Playfair Display', serif;
     font-size: 30px !important;
-}
-
-.the-image {
-    background-image: url("../images/grapes-and-wine.jpg");
-    background-repeat: no-repeat;
-    
-    }
-    
-.bg-image {
-    position: static;
 }
 
 #review {

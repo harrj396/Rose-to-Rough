@@ -1,39 +1,9 @@
-
-
-<body class = 'the-image'>
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Rosé to Rough</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <form class="d-flex" role="search">
-            <input class="form-control mx-3" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-danger" type="submit">Search</button>
-          </form>
-      </div>
-
-    </div>
-    </ul>
-            <a href="/views/login.handlebars">
-    <button id="login" class="btn btn-outline-danger me-3" >Login </button>
-  </a>
-    </div>
-    </div>
-  </nav>
-  
-
-    <div class="bg-image container-fluid">
-      <img src="./assets/images/grapes-and-wine.jpg" class="img-fluid" alt="">
-
-      <div class="position-absolute top-50 start-50 translate-middle">
-        <a href="./reviews.html">
+<body>
+  <div class="position-absolute top-50 start-50 translate-middle">
+    <a href="./reviews.html">
       <button id="review" class="btn btn-danger">Leave a Review</button>
     </a>
-    </div>
+  </div>
 
 
 
@@ -43,92 +13,89 @@
       <section class="col-12 col-md-4">
         <h1 class="h1s">Review 1</h1>
         <div class="container">
-          <div class="row" >
-              <div class="card m-4 bg-light" style="width: 19rem;">
-                <div class="card-body">
-                  <h3 class="card-title">Wine Name</h3>
-                  <h4 class="card-subtitle mb-2 text-muted">cosmic brownies</h4>
-                </div>
-                   
-                  {{!-- Need help with Helper here --}}
-                    {{#each reviews as |review|}}
-                    <li>{{review.country}}</li>
-                    <p></p>
-                    {{/each}}
-                 {{!-- below gives me a dot --}}
-                  {{!-- <li>{{Reviews.country}}</li> --}}
-
-                    </ul>
-                </div>
+          <div class="row">
+            <div class="card m-4 bg-light" style="width: 19rem;">
+              <div class="card-body">
+                <h3 class="card-title">Wine Name</h3>
+                <h4 class="card-subtitle mb-2 text-muted">cosmic brownies</h4>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Stars</li>
+                <li class="list-group-item">Twitter</li>
+                <li class="list-group-item">another</li>
+                <li class="list-group-item">Stars</li>
+                <li class="list-group-item">Twitter</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
       <section class="col-12 col-md-4">
         <h1 class="h1s">Review 2</h1>
         <div class="container">
-          <div class="row" >
-              <div class="card m-4 bg-light" style="width: 19rem;">
-                <div class="card-body">
-                  <h3 class="card-title">Wine Name</h3>
-                  <h4 class="card-subtitle mb-2 text-muted">cosmic brownies</h4>
-                </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">Stars</li>
-                      <li class="list-group-item">Twitter</li>
-                      <li class="list-group-item">another</li>
-                      <li class="list-group-item">Stars</li>
-                      <li class="list-group-item">Twitter</li>
-                    </ul>
-                </div>
+          <div class="row">
+            <div class="card m-4 bg-light" style="width: 19rem;">
+              <div class="card-body">
+                <h3 class="card-title">Wine Name</h3>
+                <h4 class="card-subtitle mb-2 text-muted">cosmic brownies</h4>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Stars</li>
+                <li class="list-group-item">Twitter</li>
+                <li class="list-group-item">another</li>
+                <li class="list-group-item">Stars</li>
+                <li class="list-group-item">Twitter</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
       <section class="col-12 col-md-4">
         <h1 class="h1s">Review 3</h1>
         <div class="container">
-          <div class="row" >
-              <div class="card m-4 bg-light" style="width: 19rem;">
-                <div class="card-body">
-                  <h3 class="card-title">Wine Name</h3>
-                  <h4 class="card-subtitle mb-2 text-muted">cosmic brownies</h4>
-                </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">Stars</li>
-                      <li class="list-group-item">Twitter</li>
-                      <li class="list-group-item">another</li>
-                      <li class="list-group-item">Stars</li>
-                      <li class="list-group-item">Twitter</li>
-                    </ul>
-                </div>
+          <div class="row">
+            <div class="card m-4 bg-light" style="width: 19rem;">
+              <div class="card-body">
+                <h3 class="card-title">Wine Name</h3>
+                <h4 class="card-subtitle mb-2 text-muted">cosmic brownies</h4>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Stars</li>
+                <li class="list-group-item">Twitter</li>
+                <li class="list-group-item">another</li>
+                <li class="list-group-item">Stars</li>
+                <li class="list-group-item">Twitter</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
     </div>
-<div class="git">
-    <h1 class="mt-5">Contact us on Github</h1>
-    <nav class="nav mt-3">
+    <footer class="git">
+      <h1 class="mt-5">Contact us on Github</h1>
+      <nav class="nav mt-3">
 
-      <a class="nav-link" href="https://github.com/nftgoat">
-        <img height="42px" src="./public/images/github_PNG40.png">
-        nftgoat
-      </a>
-      <a class="nav-link" href="https://github.com/ProNevros">
-        <img height="42px" src="./public/images/github_PNG40.png">
-        ProNevros
-      </a>
-      <a class="nav-link" href="https://github.com/harrj396">
-        <img height="42px" src="./public/images/github_PNG40.png">
-        harrj396
-      </a>
-      <a class="nav-link" href="https://github.com/oliverLo78">
-        <img height="42px" src="./public/images/github_PNG40.png">
-        oliverLo78
-      </a>
-    
+        <a class="nav-link" href="https://github.com/nftgoat">
+          <img height="42px" src="/images/github_PNG40.png">
+          nftgoat
+        </a>
+        <a class="nav-link" href="https://github.com/ProNevros">
+          <img height="42px" src="/images/github_PNG40.png">
+          ProNevros
+        </a>
+        <a class="nav-link" href="https://github.com/harrj396">
+          <img height="42px" src="/images/github_PNG40.png">
+          harrj396
+        </a>
+        <a class="nav-link" href="https://github.com/oliverLo78">
+          <img height="42px" src="/images/github_PNG40.png">
+          oliverLo78
+        </a>
 
-    </nav>
-  </div>
+
+      </nav>
+    </footer>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
@@ -166,3 +133,60 @@
 </div>
 {{/each}} --}}
 
+{{!-- <div class="container">
+  <div class="row">
+    <div class="offset-md-2 col-md-8 text-center mb-5">
+      <h2 class="header2-v2"><i class="fas fa-mouse-pointer"></i> Demo</h2>
+      <p class="thin-content">Try this solution out right now! Select one of the pictures below or upload your own
+        image.</p>
+    </div>
+  </div>
+  <div id="demo-wrapper">
+
+    <div class="row"></div>
+    <div class="col-md-10 col-lg-9 col-xl-8 text-center">
+      <p class="thik-content">Top <span id="num_people">3</span> types of wine found on this image:</p>
+      <p class="d-flex justify-content-center flex-wrap" id="brands_toggler"><span class="demo-button">
+          <i class="fas fa-tag"></i></span><span class="demo-button">dragani don gabriele montepulciano d'abruzzo 2010:
+          69.5%</span>
+        <span class="demo-button">dragani don gabriele montepulciano d'abruzzo n.v.: 69.5%</span>
+        <span class="demo-button">dragani don gabriele montepulciano d'abruzzo: 69.5%</span>
+      </p>
+
+
+
+      <div class="row">
+        <div class="d-flex justify-content-between flex-wrap fix" id="demo-images">
+
+          <div class="mb-4 demo-image-nav-wrapper opacity-100"><img
+              src="https://www.cvisionlab.com/wp-content/themes/cvisionlab/images/editor/cases/wine-recognition/demo-pic-1.jpg"
+              class="demo-image-nav demo-image-border" data-image-id="demo-pic-1"></div>
+          <div class="mb-4 demo-image-nav-wrapper opacity-100"><img
+              src="https://www.cvisionlab.com/wp-content/themes/cvisionlab/images/editor/cases/wine-recognition/demo-pic-2.jpg"
+              class="demo-image-nav demo-image-border" data-image-id="demo-pic-2"></div>
+          <div class="mb-4 demo-image-nav-wrapper opacity-100"><img
+              src="https://www.cvisionlab.com/wp-content/themes/cvisionlab/images/editor/cases/wine-recognition/demo-pic-3.jpg"
+              class="demo-image-nav demo-image-border" data-image-id="demo-pic-3"></div>
+          <div class="mb-4 demo-image-nav-wrapper opacity-100"><img
+              src="blob:https://api4.ai/8fb24b92-eccd-4493-a4e0-f8478299517a"
+              class="demo-image-nav demo-image-border selected" data-image-id="rstorqv1dy"></div>
+
+          <div class="mb-4 demo-image-nav-wrapper" style="position: relative;">
+            <label for="upload-photo" class="demo-upload-button d-flex flex-column justify-content-center"
+              id="drop-area" style="opacity: 1; cursor: pointer;">
+              <input type="file" title="Upload" id="upload-photo">
+              <span class="thik-content" style="font-size: 17px;"><i class="fas fa-image"></i> Upload image</span>
+              <span class="roboto-light" style="font-size: 12px;">jpg or png, &lt; 16 Mb</span>
+            </label>
+            <div class="upload-disabler"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <p id="drop-area-errors" class="text-center" style="display: none;">Error</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> --}}

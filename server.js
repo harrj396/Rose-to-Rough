@@ -47,6 +47,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
+app.get('/', (req, res) => {
+  //Serves the body of the page aka "main.handlebars" to the container //aka "index.handlebars"
+  res.render('main', {layout : 'index'});
+  });
+
 // sync sequelize models to the database, then turn on the server
 // Force false so data doesn't get dropped on every sync
 sequelize.sync({ force: true }).then

@@ -1,22 +1,30 @@
-    <h2>Signup</h2>
+<body>
+  <main class="container-fluid my-3">
+    <h2 class="text-center mt-4">Signup</h2>
 
     <form class="form signup-form">
-      <div class="form-group">
-        <label for="name-signup">name:</label>
-        <input class="form-input" type="text" id="name-signup" />
+      <div class="mb-3">
+        <label for="name-signup" class="form-label">Name</label>
+        <input type="name" class="form-control" id="name" aria-describedby="nameHelp">
       </div>
-      <div class="form-group">
-        <label for="email-signup">email:</label>
-        <input class="form-input" type="text" id="email-signup" />
+      <div class="mb-3">
+        <label for="email-signup" class="form-label">E-Mail</label>
+        <input type="email" class="form-control" id="email">
       </div>
-      <div class="form-group">
-        <label for="password-signup">password:</label>
-        <input class="form-input" type="password" id="password-signup" />
+      <div class="mb-3">
+        <label for="password-signup" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password">
       </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
+      <div class="mb-3">
+        <button class="btn btn-danger" type="submit">signup</button>
       </div>
     </form>
-  </div>
+    </div>
+  </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+  integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+  integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
 
-  <script src="./js/signup.js"></script>
+<script src="./js/signup.js"></script>

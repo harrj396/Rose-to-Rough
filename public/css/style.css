@@ -36,6 +36,14 @@ h5 {
     font-family: 'Playfair Display', serif;
 }
 
-#aaa {
-    margin-bottom: 12vh;
+.git { 
+    margin-top: 24vh;
 }
+
+@media (min-width: 576px) { ... }
+
+@media (min-width: 768px) { ... }
+
+@media (min-width: 992px) { ... }
+
+@media (min-width: 1200px) { ... }

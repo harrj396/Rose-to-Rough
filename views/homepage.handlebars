@@ -1,3 +1,5 @@
+
+
 <body class = 'the-image'>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
@@ -47,12 +49,14 @@
                   <h3 class="card-title">Wine Name</h3>
                   <h4 class="card-subtitle mb-2 text-muted">cosmic brownies</h4>
                 </div>
-                    <ul class="list-group list-group-flush">
-                      {{!-- <li class="list-group-item">{{review.country}}</li> --}}
-                      <li class="list-group-item">Twitter</li>
-                      <li class="list-group-item">another</li>
-                      <li class="list-group-item">Stars</li>
-                      <li class="list-group-item">Twitter</li>
+                   
+                  {{!-- Need help with Helper here --}}
+                    {{#each reviews as |review|}}
+                    <li>{{review.country}}</li>
+                    {{/each}}
+                 {{!-- below gives me a dot --}}
+                  {{!-- <li>{{Reviews.country}}</li> --}}
+
                     </ul>
                 </div>
           </div>
@@ -131,6 +135,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
     integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
     crossorigin="anonymous"></script>
+        </body>
+</html>
 
 
 <!-- Loop over each object in the posts array -->
@@ -204,6 +210,3 @@
         </div>
     </div> --}}
 
-    </body>
-
-</html>

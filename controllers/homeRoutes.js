@@ -5,15 +5,14 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     // Get all post and JOIN with user data
-    const reviewData = await Review.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
-
+    const reviewData = await Review.findAll(
+      // include: [
+      //   {
+      //     model: User,
+      //     attributes: ['name'],
+      //   },
+      // ],
+    );
     // Serialize data so the template can read it
     const reviews = reviewData.map((review) => review.get({ plain: true }));
 

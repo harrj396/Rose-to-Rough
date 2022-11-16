@@ -25,17 +25,20 @@ router.get('/', (req, res) => {
   });
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:id', async (req, res) => {
   // find one review by its `id` value
   // be sure to include its associated Products
-  Review.findOne({
-    where:{
-        id: req.params.id
-          }, 
-   include:[Product]
-        }).then((reviewData) => {
-      res.json(reviewData);
-    });
+  // Review.findOne({
+  //   where:{
+  //       id: req.params.id
+  //         }, 
+  //  include:[Product]
+  //       }).then((reviewData) => {
+  //     res.json(reviewData);
+  //   });
+  const reviewData = await Review.findByPk(req.params.id);
+  reviewData.save();
+  console.log('reviewData', reviewData);
 });
 
 // Creater a new review

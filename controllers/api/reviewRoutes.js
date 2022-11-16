@@ -28,41 +28,50 @@ router.get('/', (req, res) => {
 router.get('/:id', async (req, res) => {
   // find one review by its `id` value
   // be sure to include its associated Products
-  // Review.findOne({
-  //   where:{
-  //       id: req.params.id
-  //         }, 
-  //  include:[Product]
-  //       }).then((reviewData) => {
-  //     res.json(reviewData);
-  //   });
-  const reviewData = await Review.findByPk(req.params.id);
-  reviewData.save();
-  console.log('reviewData', reviewData);
+  Review.findOne({
+    where:{
+        id: req.params.id
+          }, 
+   include:[Product]
+        }).then((reviewData) => {
+      res.json(reviewData);
+    });
 });
 
 // Creater a new review
 router.post('/', withAuth, async (req, res) => {
-  try {
-    const newReview = await Review.create({
-      ...req.body,
-      userId: req.session.userId,
+  // try {
+  //   const newReview = await Review.create({
+  //     ...req.body,
+  //     userId: req.session.userId,
+  //   });
+  //   res.json(newReview);
+  // } catch (err) {
+  //   res.status(500).json(err);
+  // }
+
+    Review.create({
+      country: req.body.country,
+      description: req.body.description,
+      user_id: req.session.user_id
+  })
+    .then(dbPostData => res.json(dbPostData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
     });
-    res.json(newReview);
-  } catch (err) {
-    res.status(500).json(err);
-  }
+
 });
 
 router.put('/:id', (req, res) => {
-  // update a category by its `id` value
+  // update a review by its `id` value
   Review.update(req.body, {
     where: {
       id: req.params.id,
     },
   })
-  .then((category) => {
-    res.json(category)
+  .then((newReview) => {
+    res.json(newReview)
   });
 });
 

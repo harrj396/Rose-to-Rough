@@ -43,8 +43,11 @@
         <a href="/profile">profile</a> |
         <button class="no-button" id="logout">logout</button>
         {{else}}
+        <a href="/signup">
+          <button id="signup" class="btn btn-outline-danger me-3">Sign Up!</button>
+          </a>
         <a href="/login">
-          <button id="login" class="btn btn-outline-danger me-3">Login </button>
+          <button id="login" class="btn btn-outline-danger me-3">Login</button>
         </a>
         {{/if}}
       </nav>

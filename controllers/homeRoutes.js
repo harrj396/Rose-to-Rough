@@ -34,7 +34,7 @@ router.get('/signup', (req, res) => {
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('/profile');
+    res.redirect('/review');
     return;
   }
 
@@ -45,9 +45,9 @@ router.get('/login', (req, res) => {
 // GET one post
 // Use the custom middleware before allowing the 
 // user to access the posts
-router.get('/post/:id', withAuth, async (req, res) => {
+router.get('/review/:id', withAuth, async (req, res) => {
   try {
-    const postData = await Post.findByPk(req.params.id, {
+    const reviewData = await Post.findByPk(req.params.id, {
       include: [
         {
           model: User,
@@ -61,10 +61,10 @@ router.get('/post/:id', withAuth, async (req, res) => {
     ]
     });
 
-    const project = postData.get({ plain: true });
+    const reviews = reviewData.get({ plain: true });
 
-    res.render('post', {
-      ...project,
+    res.render('review', {
+      ...this.review,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -73,7 +73,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/review', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
@@ -83,7 +83,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
-    res.render('profile', {
+    res.render('review', {
       ...user,
       logged_in: true
     });

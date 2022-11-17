@@ -6,7 +6,7 @@
 
 ## Description
 
- Rose to Rough is wine review application users can see post of many options and variety of wines. The main problem it solves it allows users to signup and login and leave a review of a wine they like.
+noRose to Rough is wine review application users can see post of many options and variety of wines. The main problem it solves it allows users to signup and login and leave a review of a wine they like.
 
 Project Requirements
 
@@ -60,12 +60,17 @@ While building this project I learned to:
 - Use Node.js and Express.js to create a RESTful API.
 - Use MySQL and the Sequelize ORM for the database
 - Have both GET and POST routes for retrieving and adding new data.
-- 
+- Separation of concerns is a design principle that each section of a program   should address a separate concern.
+- The Model-View-Controller (MVC) framework is an architectural pattern that adheres to the separation of concerns principle.
+- The Model stores data and data-related logic.
+- The View is in charge of UI/UX concerns, or what a user will see and interact with.
+- The Controller is the interface between Models and Views. It processes requests from the View, uses the Model to manipulate data, and sends data to the View to rende
 
 <!-- This section is optional, checkout out Shields_Library.md for pregenerated shields -->
 ### Built With
 
-[![Template Shield](https://img.shields.io/badge/Template-000000?&style=for-the-badge)](#) [![Example: HTML Shield](https://img.shields.io/badge/HTML5-E34F26?&style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
+[![Node.js Shield](https://img.shields.io/badge/Node.js-339933?&style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/en/) 
+[![Express Shield](https://img.shields.io/badge/Express-000000?&style=for-the-badge&logo=express&logoColor=white)](http://expressjs.com/) [![Handlebars Shield](https://img.shields.io/badge/Handlebars-E34F26?&style=for-the-badge&logo=handlebars.js&logoColor=white)](https://handlebarsjs.com/) [![mySQL Shield](https://img.shields.io/badge/mySQL-4479A1?&style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
 
 ## Table of Contents
 - [Installation](#installation)
@@ -81,11 +86,11 @@ Add a comment about installing your project. For example that your project will 
 
 1. Code block example
 ```
-git clone git@github.com:Mateo-Wallace/M9-README-Generator.git
+git clone https://github.com/harrj396/Rose-to-Rough
 ```
 2. Screenshot Example
 
-![yada](https://via.placeholder.com/400x100.png)
+![example](/public/images/Screenshot%20HomePg.png)
 
 3. Single line of code example `this is a line of code`
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -121,9 +126,18 @@ Distributed under the XXX License. See [LICENSE](./LICENSE) for more information
 ## Contact
 
 For any further questions feel free to contact me via:
-- GitHub: [GitHub Username](#)
-- Email: [Your Email](mailto:#)
-- LinkedIn: [Name on LinkedIn](#)
+- GitHub: [GitHub harrj396](https://github.com/harrj396)
+- GitHub: [GitHub ProNevros](https://github.com/ProNevros)
+- GitHub: [GitHub oliverLo78](https://github.com/oliverLo78)
+- GitHub: [GitHub nftgoat](https://github.com/nftgoat)
+- Email: [ahletmethink@gmail.com](mailto:ahletmethink@gmail.com)
+- Email: [oliverberto@gmail.com](mailto:oliverberto@gmail.com)
+- Email: [Your Email](mailto:oliverberto@gmail.com)
+- Email: [Your Email](mailto:oliverberto@gmail.com)
+- LinkedIn: [Oliver Lopez](https://www.linkedin.com/in/oliver-lopez78/)
+- LinkedIn: [Jacob Harris](https://www.linkedin.com/in/jacob-harris-245119232/)
+- LinkedIn: [Name on LinkedIn](https://www.linkedin.com/in/oliver-lopez78/)
+- LinkedIn: [Name on LinkedIn](https://www.linkedin.com/in/oliver-lopez78/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Acknowledgments

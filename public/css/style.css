@@ -19,7 +19,7 @@ nav a {
     padding: 15px;
     font-size: 30px;
     margin-left: 40vw;
-    margin-top: 42vh;
+    margin-top: 49vh;
 }
 
 .form-group {
@@ -46,7 +46,7 @@ h5 {
 }
 
 @media (max-width: 768px) { 
-    #review {
+    #reviewing {
         margin-top: 210vh;
         margin-left: 0vh;
     }

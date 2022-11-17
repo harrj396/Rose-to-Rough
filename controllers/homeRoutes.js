@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 
-      reviews, 
+     reviews, 
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -93,6 +93,28 @@ router.get('/review', withAuth, async (req, res) => {
 });
 
 
+router.get('/review', async (req, res) => { 
+  try{
+  const reviewData = await Review.findAll(
+  
+  // include: [
+  //   {
+  //     model: User,
+  //     attributes: ['name'],
+  //   },
+  // ],
+);
+// Serialize data so the template can read it
+const reviews = reviewData.map((review) => review.get({ plain: true }));
 
+  
+res.render('review',{ 
+  reviews, 
+   logged_in: req.session.logged_in });
+}catch (err) {
+  res.status(500).json(err);
+}
+
+});
 
 module.exports = router;

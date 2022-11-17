@@ -13,15 +13,19 @@
           <div class="row">
             <div class="card m-4 bg-light" style="width: 19rem;">
               <div class="card-body">
-                <h3 class="card-title">Wine Name</h3>
-                <h4 class="card-subtitle mb-2 text-muted">cosmic brownies</h4>
+                <h3 class="card-title">{{reviews.0.title}}</h3>
+                <h4 class="card-subtitle mb-2 text-muted">{{reviews.0.winery}}</h4>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Stars</li>
-                <li class="list-group-item">Twitter</li>
-                <li class="list-group-item">another</li>
-                <li class="list-group-item">Stars</li>
-                <li class="list-group-item">Twitter</li>
+                <li class="list-group-item">{{reviews.0.description}}</li>
+                <li class="list-group-item">Variety: {{reviews.0.variety}}</li>
+                <li class="list-group-item">{{reviews.0.country}}</li>
+                <li class="list-group-item">{{reviews.0.designation}}</li>
+                <li class="list-group-item"> Score: {{reviews.0.points}} / 100</li>
+                <li class="list-group-item">Price: ${{reviews.0.price}}</li>
+                <li class="list-group-item">{{reviews.0.province}}</li>
+                <li class="list-group-item">{{reviews.0.region_1}}</li>
+                <li class="list-group-item">Sommelier: {{reviews.0.taster_name}}</li>
               </ul>
             </div>
           </div>

@@ -12,10 +12,10 @@ In this order, describe your project: "What is it?" Rose to Rough is wine review
 
 While building this project I learned to:
 
+- Use Node.js and Express.js to create a RESTful API.
+- Use MySQL and the Sequelize ORM for the database
+- Have both GET and POST routes for retrieving and adding new data.
 - 
-- Usually about 3 or 4 will do. 
-- The next one will be an example
-- "Use the Node Core Module `fs`, also known as `File System`, to write a new file using JavaScript"
 
 <!-- This section is optional, checkout out Shields_Library.md for pregenerated shields -->
 ### Built With

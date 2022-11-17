@@ -40,8 +40,10 @@
         </div>
         </ul>
         {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
+        <a href="/profile">
+         <button class="btn btn-outline-danger me-3">Profile</button>
+        </a> 
+         <button class="btn btn-outline-danger me-3" id="logout">Logout</button>
         {{else}}
         <a href="/signup">
           <button id="signup" class="btn btn-outline-danger me-3">Sign Up!</button>

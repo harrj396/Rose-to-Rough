@@ -9,24 +9,34 @@
     <div id="reviews" class="row">
       <section class="col-12 col-md-4">
         <div class="container">
-          <div class="row">
-            <div class="card m-4 bg-light" style="width: 19rem;">
-              <div class="card-body">
-                <h3 class="card-title">{{reviews.0.title}}</h3>
-                <h4 class="card-subtitle mb-2 text-muted">{{reviews.0.winery}}</h4>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">{{reviews.0.description}}</li>
-                <li class="list-group-item">Variety: {{reviews.0.variety}}</li>
-                <li class="list-group-item">{{reviews.0.country}}</li>
-                <li class="list-group-item">{{reviews.0.designation}}</li>
-                <li class="list-group-item"> Score: {{reviews.0.points}} / 100</li>
-                <li class="list-group-item">Price: ${{reviews.0.price}}</li>
-                <li class="list-group-item">{{reviews.0.province}}</li>
-                <li class="list-group-item">{{reviews.0.region_1}}</li>
-                <li class="list-group-item">Sommelier: {{reviews.0.taster_name}}</li>
-              </ul>
-            </div>
+          <div class="row" >
+              <div class="card m-4 bg-light" style="width: 19rem;">
+                <div class="card-body">
+                  <h3 class="card-title">Wine Name</h3>
+                  <h4 class="card-subtitle mb-2 text-muted">cosmic brownies</h4>
+                </div>
+                   
+                  {{!-- Need help with Helper here --}}
+                    {{#each reviews as |review|}}
+                    <section class="card">
+                    {{!-- <a href="/painting/{{id}}"> --}}
+                      <header>{{review.country}}</header>
+                      <p>{{review.description}}</p>
+                      <div class="card-body">
+                         
+                        
+                      </div>
+                    </a>
+                    </section>
+                    {{/each}}
+                    {{!-- <li>{{review.country}}</li> --}}
+                    {{!-- <p></p> --}}
+                    
+                 {{!-- below gives me a dot --}}
+                  {{!-- <li>{{Reviews.country}}</li> --}}
+{{!-- 
+                    </ul>
+                </div>
           </div>
         </div>
       </section>
@@ -115,7 +125,7 @@
     integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
     crossorigin="anonymous"></script>
         </body>
-</html>
+</html> --}}
 
 
 <!-- Loop over each object in the posts array -->
@@ -132,14 +142,13 @@
       <span for="img" aria-label="bottle">🍾</span>
       <!-- Pass needed_funding value to the helper function -->
       <span class=""></span>
-      Needed!
     </p>
-    <p>Created by {{review.user.name}}</p>
+    <p>Created by {{review.user.taster_name}}</p>
   </div>
   <div class="col-md-7">
-    <p>
+    {{!-- <p>
       {{review.description}}
-    </p>
+    </p> --}}
   </div>
 </div>
 {{/each}} 

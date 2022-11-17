@@ -19,7 +19,7 @@ nav a {
     padding: 15px;
     font-size: 30px;
     margin-left: 40vw;
-    margin-top: 24vh;
+    margin-top: 42vh;
 }
 
 .form-group {
@@ -30,6 +30,11 @@ nav a {
 
 h1 {
     font-family: 'Kanit', sans-serif;
+    
+}
+
+.h1s {
+    margin-left: 6vw;
 }
 
 h5 {
@@ -40,10 +45,9 @@ h5 {
     margin-top: 24vh;
 }
 
-@media (min-width: 576px) { ... }
-
-@media (min-width: 768px) { ... }
-
-@media (min-width: 992px) { ... }
-
-@media (min-width: 1200px) { ... }
+@media (max-width: 768px) { 
+    #review {
+        margin-top: 210vh;
+        margin-left: 0vh;
+    }
+}

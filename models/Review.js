@@ -11,7 +11,7 @@ Review.init(
       allowNull: false,
     },
     description: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     designation: {
@@ -24,7 +24,6 @@ Review.init(
     },
     price: {
       type: DataTypes.INTEGER,
-      allowNull: false,
     },
     province: {
       type: DataTypes.STRING,

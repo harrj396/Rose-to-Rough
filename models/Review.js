@@ -8,46 +8,36 @@ Review.init(
   {
     country: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     description: {
       type: DataTypes.TEXT,
-      allowNull: false,
     },
     designation: {
       type: DataTypes.STRING,
-      allowNull: true,
     },
     points: {
       type: DataTypes.INTEGER,
-      allowNull: false,
     },
     price: {
       type: DataTypes.INTEGER,
     },
     province: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     region_1: {
       type: DataTypes.STRING,
-      allowNull: true,
     },
     taster_name: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     title: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     variety: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     winery: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,

@@ -70,7 +70,11 @@ While building this project I learned to:
 ### Built With
 
 [![Node.js Shield](https://img.shields.io/badge/Node.js-339933?&style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/en/) 
-[![Express Shield](https://img.shields.io/badge/Express-000000?&style=for-the-badge&logo=express&logoColor=white)](http://expressjs.com/) [![Handlebars Shield](https://img.shields.io/badge/Handlebars-E34F26?&style=for-the-badge&logo=handlebars.js&logoColor=white)](https://handlebarsjs.com/) [![mySQL Shield](https://img.shields.io/badge/mySQL-4479A1?&style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![Express Shield](https://img.shields.io/badge/Express-000000?&style=for-the-badge&logo=express&logoColor=white)](http://expressjs.com/) 
+[![Handlebars Shield](https://img.shields.io/badge/Handlebars-E34F26?&style=for-the-badge&logo=handlebars.js&logoColor=white)](https://handlebarsjs.com/)
+[![mySQL Shield](https://img.shields.io/badge/mySQL-4479A1?&style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
+
 
 ## Table of Contents
 - [Installation](#installation)

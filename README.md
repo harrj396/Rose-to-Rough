@@ -6,7 +6,7 @@
 
 ## Description
 
-noRose to Rough is wine review application users can see post of many options and variety of wines. The main problem it solves it allows users to signup and login and leave a review of a wine they like.
+Rose to Rough is wine review application users can see post of many options and variety of wines. The main problem it solves it allows users to signup and login and leave a review of a wine they like.
 
 Project Requirements
 

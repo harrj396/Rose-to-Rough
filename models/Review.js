@@ -26,30 +26,30 @@ Review.init(
     //   type: DataTypes.INTEGER,
     //   allowNull: false,
     // },
-    // province: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
-    // region_1: {
-    //   type: DataTypes.STRING,
-    //   allowNull: true,
-    // },
-    // taster_name: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
-    // title: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
-    // variety: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
-    // winery: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
+     province: {
+       type: DataTypes.STRING,
+       allowNull: false,
+     },
+     region_1: {
+       type: DataTypes.STRING,
+       allowNull: true,
+     },
+     taster_name: {
+       type: DataTypes.STRING,
+       allowNull: false,
+     },
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+     },
+     variety: {
+       type: DataTypes.STRING,
+       allowNull: false,
+     },
+     winery: {
+       type: DataTypes.STRING,
+       allowNull: false,
+     },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

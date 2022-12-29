@@ -14,10 +14,10 @@ Review.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // designation: {
-    //   type: DataTypes.STRING,
-    //   allowNull: true,
-    // },
+    designation: {
+       type: DataTypes.STRING,
+       allowNull: true,
+     },
     // points: {
     //   type: DataTypes.INTEGER,
     //   allowNull: false,

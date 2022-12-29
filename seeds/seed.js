@@ -2,26 +2,26 @@ const sequelize = require('../config/connection');
 const { User, Review } = require('../models');
 
 const userSeedData = require('./userSeedData.json');
-const bookSeedData = require('./bookSeedData.json');
+const reviewSeedData = require('./reviewSeedData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  const users = await Reader.bulkCreate(userSeedData, {
+  const users = await User.bulkCreate(userSeedData, {
     individualHooks: true,
     returning: true,
   });
 
   for (const { id } of users) {
-    const newUser = await User.create({
+    const newCard = await User.create({
       user_id: id,
     });
   }
 
-  for (const book of bookSeedData) {
-    const newBook = await Book.create({
-      ...book,
-      // Attach a random reader ID to each book
+  for (const review of reviewSeedData) {
+    const newReview = await Review.create({
+      ...review,
+      // Attach a random user ID to each review
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }

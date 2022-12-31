@@ -1,13 +1,14 @@
 [
   {
+    "country": "US",
+    "description": "Notes of tobacco mingle with exploding raspberry tones. Great with steak, burgers and mild cheeses.",
+    "designation": "",
     "title": "Habersham",
     "taster-name": "Oliver Lopez",
-    "country": "US",
     "variety": "Cabernet Sauvignon",
     "winery": "Habersham Vineyards",
     "province": "Georgia",
-    "region_1": "Helen Georgia",
-    "description": "Notes of tobacco mingle with exploding raspberry tones. Great with steak, burgers and mild cheeses."
+    "region_1": "Helen Georgia"
   },
   {
     "title": "Montaluce",
@@ -27,7 +28,7 @@
     "winery": "Peter Cellars Winery",
     "province": "Sonoma",
     "region_1": "Sonoma California",
-    "description": "This lively rose, made from predominantly  the south block of our pinot noir,vineyard  has fragrant aromas of fresh strawberries and orange zest, with wisps of cherry blossom. The flavors are soft and round."
+    "description": "This lively rose, made from predominantly the south block of our pinot noir,vineyard  has fragrant aromas of fresh strawberries and orange zest, with wisps of cherry blossom. The flavors are soft and round."
   },
   {
     "title": "NV CaliW Blend",

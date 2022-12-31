@@ -52,7 +52,7 @@ app.get('/', (req, res) => {
 
 // sync sequelize models to the database, then turn on the server
 // Force false so data doesn't get dropped on every sync
-sequelize.sync({ force: true }).then
+sequelize.sync({ force: false }).then
 (() => {
   app.listen(PORT, () => console.log
   (`App listening on port ${PORT}!`));

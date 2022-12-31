@@ -1,21 +1,8 @@
 const router = require('express').Router();
-const { Review } = require('../../models');
+const  Review  = require('../../models/Review');
 const withAuth = require('../../utils/auth');
 
-const comments = [
-  {
-    id: 1,
-    comment_title: 'Why MVC is so important',
-    description: 
-      'MVC allows developers to maintain a true separation of concerns, devising their code between the Model layer for data, the view layer for design'
-  },
-  {
-    id: 2,
-    comment_title: 'Authenticatioon vs. Authorization',
-    description: 
-      'There is a difference between authentication and authorization. Authentication menas confirming your own identity'
-  },
-];
+
 
 router.get('/', (req, res) => {
   // find all reviews
@@ -32,29 +19,22 @@ router.get('/:id', async (req, res) => {
     where:{
         id: req.params.id
           }, 
-   include:[Product]
+   
         }).then((reviewData) => {
       res.json(reviewData);
     });
 });
 
-// Creater a new review
+// Create a new review
 router.post('/', withAuth, async (req, res) => {
-  // try {
-  //   const newReview = await Review.create({
-  //     ...req.body,
-  //     userId: req.session.userId,
-  //   });
-  //   res.json(newReview);
-  // } catch (err) {
-  //   res.status(500).json(err);
-  // }
-
+    // use Sequelize's create() method to add a row 
+    // to the table 
+    // Similar to "INSERT INTO" in plain SQL
     Review.create({
-      country: req.body.country,
       description: req.body.description,
+      title: req.body.title,
       user_id: req.session.user_id
-  })
+   })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
       console.log(err);

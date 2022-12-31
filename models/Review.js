@@ -18,14 +18,14 @@ Review.init(
        type: DataTypes.STRING,
        allowNull: true,
      },
-    // points: {
-    //   type: DataTypes.INTEGER,
-    //   allowNull: false,
-    // },
-    // price: {
-    //   type: DataTypes.INTEGER,
-    //   allowNull: false,
-    // },
+     points: {
+       type: DataTypes.INTEGER,
+       allowNull: false,
+     },
+     price: {
+       type: DataTypes.INTEGER,
+       allowNull: false,
+     },
      province: {
        type: DataTypes.STRING,
        allowNull: false,
@@ -60,9 +60,9 @@ Review.init(
   },
   {
     sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
+    timestamps: true,
+    // freezeTableName: true,
+    // underscored: true,
     modelName: 'review',
   }
 );

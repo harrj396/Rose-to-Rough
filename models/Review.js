@@ -8,11 +8,36 @@ Review.init(
   {
     country: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     description: {
+      type: DataTypes.TEXT,
+    },
+    designation: {
       type: DataTypes.STRING,
-      allowNull: false,
+    },
+    points: {
+      type: DataTypes.INTEGER,
+    },
+    price: {
+      type: DataTypes.INTEGER,
+    },
+    province: {
+      type: DataTypes.STRING,
+    },
+    region_1: {
+      type: DataTypes.STRING,
+    },
+    taster_name: {
+      type: DataTypes.STRING,
+    },
+    title: {
+      type: DataTypes.STRING,
+    },
+    variety: {
+      type: DataTypes.STRING,
+    },
+    winery: {
+      type: DataTypes.STRING,
     },
     designation: {
        type: DataTypes.STRING,

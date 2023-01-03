@@ -6,7 +6,7 @@
 
 ## Description
 
-noRose to Rough is wine review application users can see post of many options and variety of wines. The main problem it solves it allows users to signup and login and leave a review of a wine they like.
+Rose to Rough is wine review application users can see post of many options and variety of wines. The main problem it solves it allows users to signup and login and leave a review of a wine they like.
 
 Project Requirements
 
@@ -70,7 +70,11 @@ While building this project I learned to:
 ### Built With
 
 [![Node.js Shield](https://img.shields.io/badge/Node.js-339933?&style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/en/) 
-[![Express Shield](https://img.shields.io/badge/Express-000000?&style=for-the-badge&logo=express&logoColor=white)](http://expressjs.com/) [![Handlebars Shield](https://img.shields.io/badge/Handlebars-E34F26?&style=for-the-badge&logo=handlebars.js&logoColor=white)](https://handlebarsjs.com/) [![mySQL Shield](https://img.shields.io/badge/mySQL-4479A1?&style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![Express Shield](https://img.shields.io/badge/Express-000000?&style=for-the-badge&logo=express&logoColor=white)](http://expressjs.com/) 
+[![Handlebars Shield](https://img.shields.io/badge/Handlebars-E34F26?&style=for-the-badge&logo=handlebars.js&logoColor=white)](https://handlebarsjs.com/)
+[![mySQL Shield](https://img.shields.io/badge/mySQL-4479A1?&style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
+
 
 ## Table of Contents
 - [Installation](#installation)
@@ -88,6 +92,17 @@ Add a comment about installing your project. For example that your project will 
 ```
 git clone https://github.com/harrj396/Rose-to-Rough
 ```
+Install Dependencies
+
+All NPM packages required for this application (Express.js, Node.js, Mongoose, MySQL and the Sequelize ORM) are already listed as dependencies in the package.json file. Run the command 'npm i' command in your terminal at the root directory level to install the packages.
+Ensure you have Node.js installed on your machine. The Rose to Rough application will be invoked by entering node server.js in the command line.
+
+Start Application
+
+You will see App running on port 3000! in the console. You can then view the app on http://localhost:3000/.
+
+Finally, to make your profile Employer Competitive, add a headline. For your  headline, try to make it catchy and unique to you. For example: “Web  Developer + Creative Thinker” or “UX-Focused Web Developer” is a  little more interesting and informative than just “Web Developer”. 
+
 2. Screenshot Example
 
 ![example](/public/images/Screenshot%20HomePg.png)

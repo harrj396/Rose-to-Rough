@@ -1,13 +1,12 @@
 body {
     color: #B82A23 !important;
     font-family: 'Montserrat', sans-serif !important;
-
-    background-color: #D1BBBA !important;
-
+  background-image: url(../images/grapes-and-wine.jpg);
 }
 
 nav {
     background-color:aliceblue;
+    border-radius: 10px;
 }
 
 nav a {
@@ -16,19 +15,11 @@ nav a {
     font-size: 30px !important;
 }
 
-.the-image {
-    background-image: url("../images/grapes-and-wine.jpg");
-    background-repeat: no-repeat;
-    
-    }
-    
-.bg-image {
-    position: static;
-}
-
 #review {
     padding: 15px;
     font-size: 30px;
+    margin-left: 42vw;
+    margin-top: 51vh;
 }
 
 .form-group {
@@ -39,8 +30,24 @@ nav a {
 
 h1 {
     font-family: 'Kanit', sans-serif;
+    
+}
+
+.h1s {
+    margin-left: 6vw;
 }
 
 h5 {
     font-family: 'Playfair Display', serif;
+}
+
+.git { 
+    margin-top: 24vh;
+}
+
+@media (max-width: 768px) { 
+    #reviewing {
+        margin-top: 210vh;
+        margin-left: 0vh;
+    }
 }

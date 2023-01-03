@@ -2,8 +2,6 @@ const router = require('express').Router();
 const  Review  = require('../../models/Review');
 const withAuth = require('../../utils/auth');
 
-
-
 router.get('/', (req, res) => {
   // find all reviews
   // be sure to include its associated Products

@@ -1,25 +1,25 @@
-// const router = require('express').Router();
+const router = require('express').Router();
 // const {User, Review } = require('../models');
-// const withAuth = require('../utils/auth');
+const withAuth = require('../utils/auth');
 
-// router.get('/', async (req, res) => {
-//   try {
-//     // Get all post and JOIN with user data
-//     const reviewData = await Review.findAll().catch((err) => {
-//       res.json(err);
-//     });
-//     // Serialize data so the template can read it
-//     const reviews = reviewData.map((review) => review.get({ plain: true }));
+router.get('/', async (req, res) => {
+  try {
+    // Get all post and JOIN with user data
+    const reviewData = await Review.findAll().catch((err) => {
+      res.json(err);
+    });
+    // Serialize data so the template can read it
+    const reviews = reviewData.map((review) => review.get({ plain: true }));
 
-//     // Pass serialized data and session flag into template
-//     res.render('homepage', { 
-//      reviews, 
-//       logged_in: req.session.logged_in 
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+    // Pass serialized data and session flag into template
+    res.render('homepage', { 
+     reviews, 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 // create a route for signup call the signup handlebars
 router.get('/signup', (req, res) => {

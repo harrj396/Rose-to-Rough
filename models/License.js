@@ -28,7 +28,7 @@ License.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'library_card',
+    modelName: 'license_card',
   }
 );
 

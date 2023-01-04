@@ -22,4 +22,4 @@ Review.belongsTo(User, {
 });
 
 
-module.exports = { User, Review };
+module.exports = { User, Review, License };

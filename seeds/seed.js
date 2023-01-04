@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection');
-const { User, Review } = require('../models');
+const { User, Review, License } = require('../models');
 
 const userSeedData = require('./userSeedData.json');
 const reviewSeedData = require('./reviewSeedData.json');
@@ -13,7 +13,7 @@ const seedDatabase = async () => {
   });
 
   for (const { id } of users) {
-    const newCard = await User.create({
+    const newLicense = await License.create({
       user_id: id,
     });
   }

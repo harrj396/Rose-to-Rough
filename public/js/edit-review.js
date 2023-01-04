@@ -3,9 +3,9 @@ async function editFormHandler(event) {
   const title = document.querySelector('#title').value;
   const description = document.querySelector('#description').value;
   const taster_name = document.querySelector('#taster_name').value;
-  
-  // What will the value of has_nuts be if the box in the form is checked? 
-  // The value of has_nuts will be true if the box is checked. 
+
+  // What will the value of is_twenty_one be if the box in the form is checked? 
+  // The value of is_twenty_one will be true if the box is checked. 
   // What do we call this kind of operator?
   // We call this a ternary operator. It begins with a condition followed by a question mark and two code blocks separated by a :.
   const is_twenty_one = document.querySelector('#is_twenty_one:checked') ? true : false;

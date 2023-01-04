@@ -1,18 +1,18 @@
 async function newFormHandler(event) {
   event.preventDefault();
 
-  const dish_name = document.querySelector('#dish_name').value;
+  const title = document.querySelector('#title').value;
   const description = document.querySelector('#description').value;
-  const guest_name = document.querySelector('#guest_name').value;
-  const has_nuts = document.querySelector('#has_nuts:checked') ? true : false;
+  const taster_name = document.querySelector('#taster_name').value;
+  const is_twenty_one = document.querySelector('#is_twenty_one:checked') ? true : false;
 
   const response = await fetch(`/api/dish`, {
     method: 'POST',
     body: JSON.stringify({
-      dish_name,
+      title,
       description,
-      guest_name,
-      has_nuts,
+      taster_name,
+      is_twenty_one,
     }),
     headers: {
       'Content-Type': 'application/json',
@@ -22,7 +22,7 @@ async function newFormHandler(event) {
   if (response.ok) {
     document.location.replace('/');
   } else {
-    alert('Failed to add dish');
+    alert('Failed to add review');
   }
 }
 

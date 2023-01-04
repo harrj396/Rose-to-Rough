@@ -118,7 +118,7 @@ router.get('/review', withAuth, async (req, res) => {
 // const Dish = require('../models/Dish');
 const {User, Review } = require('../models');
 
-// route to get all dishes
+// route to get all reviews
 router.get('/', async (req, res) => {
     const reviewData = await Review.findAll().catch((err) => { 
         res.json(err);
@@ -127,7 +127,7 @@ router.get('/', async (req, res) => {
         res.render('all', { reviews });
       });
   
-  // route to get one dish
+  // route to get one review
   router.get('/review/:id', async (req, res) => {
     try{ 
         const reviewData = await Review.findByPk(req.params.id);

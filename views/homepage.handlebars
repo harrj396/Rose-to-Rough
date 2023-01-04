@@ -1,7 +1,4 @@
 <body>
-  
-
-
 
   <main class="container-fluid my-3">
     
@@ -20,7 +17,7 @@
                 <li class="list-group-item">Variety: {{reviews.0.variety}}</li>
                 <li class="list-group-item">Country of origin: {{reviews.0.country}}</li>
                 <li class="list-group-item">Grape designation: {{reviews.0.designation}}</li>
-                <li class="list-group-item"> Score: {{reviews.0.points}} / 100</li>
+                <li class="list-group-item">Score: {{reviews.0.points}} / 100</li>
                 <li class="list-group-item">Price: ${{reviews.0.price}}</li>
                 <li class="list-group-item">Province: {{reviews.0.province}}</li>
                 <li class="list-group-item">Region: {{reviews.0.region_1}}</li>
@@ -76,13 +73,13 @@
           </div>
         </div>
       </section>
-      <div class="position-absolute top-50 start-50 bottom-50 translate-middle">
+
+      {{!-- <div class="position-absolute top-50 start-50 bottom-50 translate-middle">
     <a href="/review">
       <button id="review" class="btn btn-danger">Leave a Review</button>
     </a>
-  </div>
-
-        <form>
+  </div> --}}
+        {{!-- <form>
             <div class="form-group mt-3">
                 <label for="new-review-form">Enter the country the wine is from</label>
                 <textarea class="form-control" id="new-review-form" rows="1"></textarea>
@@ -92,7 +89,85 @@
                 <label for="exampleFormControlTextarea1">Enter your review/description of the wine here</label>
                 <textarea class="form-control" id="new-review-form" rows="3"></textarea>
               </div>
-        </form>
+        </form> --}}
+
+      <div class="menu-container">
+  <div class="card-header col-md-12 text-center">
+    <h2>
+      &#127863 Current Wine Review &#127863
+    </h2>
+  </div>
+  {{#each reviews as |review|}}
+  <div class="dish col-md-4">
+    <p>
+      {{review.id}}.
+      {{review.title}}
+    </p>
+  </div>
+  <div class="col-md-5">
+    <p>
+      Guest:
+      {{review.taster_name}}
+    </p>
+  </div>
+  <div class="col-md-3">
+    	&#128286: {{#if review.is_twenty_one}} Old enough to sample the wine {{else}} Not 21 yet! {{/if}}
+  </div>
+  {{/each}}
+  <!-- This is the form for adding a new dish -->
+  <div class="add-dish-container">
+    <h2>
+      Write a review for your favorite wines!
+    </h2>
+    <form class="new-wine-form">
+      <label for="wine_name">
+        Wine Name:
+      </label>
+      <br />
+      <textarea id="wine_name" name="wine_name" rows="2" cols="30">
+      {{title}}
+    </textarea>
+      <br />
+      <label for="description">
+        Description:
+      </label>
+      <br />
+      <textarea id="description" name="description" rows="5" cols="30">
+      {{description}}
+    </textarea>
+      <br />
+      <label for="taster_name">
+        Taster Name:
+      </label>
+      <br />
+      <textarea id="taster_name" name="taster_name" rows="2" cols="30">
+      {{taster_name}}
+    </textarea>
+      <br />
+      <br />
+      {{#if is_twenty_one}}
+      <input type="checkbox" id="is_twenty_one" name="is_twenty_one" checked />
+      {{else}}
+      <input type="checkbox" id="is_twenty_one" name="is_twenty_one" />
+      {{/if}}
+      <label for="is_twenty_one">
+        Check box if you are older than 21 
+      </label>
+      <br />
+      <button type="submit" value="Submit">
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+
+<script src="/js/add-review.js"></script>
+
+      
+
+
+
+
 
     </div>
     <footer class="git">
@@ -116,7 +191,6 @@
           oliverLo78
         </a>
 
-
       </nav>
     </footer>
   </main>
@@ -129,29 +203,3 @@
         </body>
 </html>
 
-
-<!-- Loop over each object in the posts array -->
-{{!-- {{#each reviews as |review| }}
-
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji}}}
-      <a href="/project/{{review.id}}">{{review.name}}</a>
-    </h2>
-    <p>
-      <span for="img" aria-label="bottle">🍾</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class=""></span>
-      Needed!
-    </p>
-    <p>Created by {{review.user.name}}</p>
-  </div>
-  <div class="col-md-7">
-    <p>
-      {{review.description}}
-    </p>
-  </div>
-</div>
-{{/each}}  --}}

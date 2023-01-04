@@ -1,27 +1,27 @@
-// const router = require('express').Router();
-// const  Review  = require('../../models/Review');
-// const withAuth = require('../../utils/auth');
+const withAuth = require('../../utils/auth');
+const router = require('express').Router();
+const  Review  = require('../../models/Review');
 
-// router.get('/', (req, res) => {
-//   // find all reviews
-//   // be sure to include its associated Products
-//   Review.findAll().then((reviewData) => {
-//     res.json(reviewData);
-//   });
-// });
+router.get('/', (req, res) => {
+  // find all reviews
+  // be sure to include its associated Products
+  Review.findAll().then((reviewData) => {
+    res.json(reviewData);
+  });
+});
 
-// router.get('/:id', async (req, res) => {
-//   // find one review by its `id` value
-//   // be sure to include its associated Products
-//   Review.findOne({
-//     where:{
-//         id: req.params.id
-//           }, 
+router.get('/:id', async (req, res) => {
+  // find one review by its `id` value
+  // be sure to include its associated Products
+  Review.findOne({
+    where:{
+        id: req.params.id
+          }, 
    
-//         }).then((reviewData) => {
-//       res.json(reviewData);
-//     });
-// });
+        }).then((reviewData) => {
+      res.json(reviewData);
+    });
+});
 
 // // Create a new review
 // router.post('/', withAuth, async (req, res) => {
@@ -54,35 +54,29 @@
 // });
 
 
-// router.delete('/:id', withAuth, async (req, res) => {
-//   try {
-//     const reviewData = await Review.destroy({
-//       where: {
-//         id: req.params.id,
-//         user_id: req.session.user_id,
-//       },
-//     });
+router.delete('/:id', withAuth, async (req, res) => {
+  try {
+    const reviewData = await Review.destroy({
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      },
+    });
 
-//     if (!reviewData) {
-//       res.status(404).json({ message: 'No post found with this id!' });
-//       return;
-//     }
+    if (!reviewData) {
+      res.status(404).json({ message: 'No post found with this id!' });
+      return;
+    }
 
-//     res.status(200).json(reviewData);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+    res.status(200).json(reviewData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 // module.exports = router;
 
 /********************************************************************************************************************************** */
-
-const router = require('express').Router();
-const  Review  = require('../../models/Review');
-// const withAuth = require('../../utils/auth');
-
-
 
 // route to create/add a dish
 router.post('/', async (req, res) => {
@@ -91,7 +85,7 @@ router.post('/', async (req, res) => {
       title: req.body.title,
       description: req.body.description,
       taster_name: req.body.taster_name,
-      has_nuts: req.body.has_nuts,
+      is_twenty_one: req.body.is_twenty_one,
     });
     res.status(200).json(reviewData);
   } catch (err) {
@@ -110,7 +104,7 @@ router.put('/:id', async (req, res) => {
         title: req.body.title,
         description: req.body.description,
         guest_name: req.body.guest_name,
-        has_nuts: req.body.has_nuts,
+        is_twenty_one: req.body.is_twenty_one,
       },
       {
         where: {
@@ -120,7 +114,7 @@ router.put('/:id', async (req, res) => {
     );
     // If the database is updated successfully, what happens to the updated data below?
     // The updated data (dish) is then sent back to handler that dispatched the fetch request.
-    res.status(200).json(dish);
+    res.status(200).json(review);
   } catch (err) {
     res.status(500).json(err);
   }

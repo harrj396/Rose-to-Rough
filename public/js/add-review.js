@@ -6,7 +6,7 @@ async function newFormHandler(event) {
   const taster_name = document.querySelector('#taster_name').value;
   const is_twenty_one = document.querySelector('#is_twenty_one:checked') ? true : false;
 
-  const response = await fetch(`/api/dish`, {
+  const response = await fetch(`/api/review`, {
     method: 'POST',
     body: JSON.stringify({
       title,
@@ -27,5 +27,5 @@ async function newFormHandler(event) {
 }
 
 document
-  .querySelector('.new-dish-form')
+  .querySelector('.new-review-form')
   .addEventListener('submit', newFormHandler);

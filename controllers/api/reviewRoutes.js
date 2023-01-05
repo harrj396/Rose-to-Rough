@@ -103,7 +103,7 @@ router.put('/:id', async (req, res) => {
       {
         title: req.body.title,
         description: req.body.description,
-        guest_name: req.body.guest_name,
+        taster_name: req.body.taster_name,
         is_twenty_one: req.body.is_twenty_one,
       },
       {

@@ -1,21 +1,6 @@
-const router = require('express').Router();
-const { Review } = require('../../models');
 const withAuth = require('../../utils/auth');
-
-const comments = [
-  {
-    id: 1,
-    comment_title: 'Why MVC is so important',
-    description: 
-      'MVC allows developers to maintain a true separation of concerns, devising their code between the Model layer for data, the view layer for design'
-  },
-  {
-    id: 2,
-    comment_title: 'Authenticatioon vs. Authorization',
-    description: 
-      'There is a difference between authentication and authorization. Authentication menas confirming your own identity'
-  },
-];
+const router = require('express').Router();
+const  Review  = require('../../models/Review');
 
 router.get('/', (req, res) => {
   // find all reviews
@@ -32,48 +17,41 @@ router.get('/:id', async (req, res) => {
     where:{
         id: req.params.id
           }, 
-   include:[Product]
+   
         }).then((reviewData) => {
       res.json(reviewData);
     });
 });
 
-// Creater a new review
-router.post('/', withAuth, async (req, res) => {
-  // try {
-  //   const newReview = await Review.create({
-  //     ...req.body,
-  //     userId: req.session.userId,
-  //   });
-  //   res.json(newReview);
-  // } catch (err) {
-  //   res.status(500).json(err);
-  // }
+// // Create a new review
+// router.post('/', withAuth, async (req, res) => {
+//     // use Sequelize's create() method to add a row 
+//     // to the table 
+//     // Similar to "INSERT INTO" in plain SQL
+//     Review.create({
+//       description: req.body.description,
+//       title: req.body.title,
+//       user_id: req.session.user_id
+//    })
+//     .then(dbPostData => res.json(dbPostData))
+//     .catch(err => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
 
-    Review.create({
-      country: req.body.country,
-      description: req.body.description,
-      user_id: req.session.user_id
-  })
-    .then(dbPostData => res.json(dbPostData))
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+// });
 
-});
-
-router.put('/:id', (req, res) => {
-  // update a review by its `id` value
-  Review.update(req.body, {
-    where: {
-      id: req.params.id,
-    },
-  })
-  .then((newReview) => {
-    res.json(newReview)
-  });
-});
+// router.put('/:id', (req, res) => {
+//   // update a review by its `id` value
+//   Review.update(req.body, {
+//     where: {
+//       id: req.params.id,
+//     },
+//   })
+//   .then((newReview) => {
+//     res.json(newReview)
+//   });
+// });
 
 
 router.delete('/:id', withAuth, async (req, res) => {
@@ -91,6 +69,52 @@ router.delete('/:id', withAuth, async (req, res) => {
     }
 
     res.status(200).json(reviewData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// module.exports = router;
+
+/********************************************************************************************************************************** */
+
+// route to create/add a dish
+router.post('/', async (req, res) => {
+  try {
+    const reviewData = await Review.create({
+      title: req.body.title,
+      description: req.body.description,
+      taster_name: req.body.taster_name,
+      is_twenty_one: req.body.is_twenty_one,
+    });
+    res.status(200).json(reviewData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+// According to MVC, what is the role of this action method?
+// This action method is the Controller. It accepts input and sends data to the Model and the View.
+router.put('/:id', async (req, res) => {
+  // Where is this action method sending the data from the body of the fetch request? Why?
+  // It is sending the data to the Model so that one dish can be updated with new data in the database.
+  try {
+    const review = await Review.update(
+      {
+        title: req.body.title,
+        description: req.body.description,
+        taster_name: req.body.taster_name,
+        is_twenty_one: req.body.is_twenty_one,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
+    // If the database is updated successfully, what happens to the updated data below?
+    // The updated data (dish) is then sent back to handler that dispatched the fetch request.
+    res.status(200).json(review);
   } catch (err) {
     res.status(500).json(err);
   }

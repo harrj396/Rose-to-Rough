@@ -1,18 +1,13 @@
 const router = require('express').Router();
-const {User, Review } = require('../models');
+// const {User, Review } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
     // Get all post and JOIN with user data
-    const reviewData = await Review.findAll(
-      // include: [
-      //   {
-      //     model: User,
-      //     attributes: ['name'],
-      //   },
-      // ],
-    );
+    const reviewData = await Review.findAll().catch((err) => {
+      res.json(err);
+    });
     // Serialize data so the template can read it
     const reviews = reviewData.map((review) => review.get({ plain: true }));
 
@@ -41,36 +36,35 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-
 // GET one post
 // Use the custom middleware before allowing the 
 // user to access the posts
-router.get('/review/:id', withAuth, async (req, res) => {
-  try {
-    const reviewData = await Post.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: [
-          'id',
-          'name',
-          'description',
-          'date_created',
-        ],
-      },
-    ]
-    });
+// router.get('/review/:id', withAuth, async (req, res) => {
+//   try {
+//     const reviewData = await Post.findByPk(req.params.id, {
+//       include: [
+//         {
+//           model: User,
+//           attributes: [
+//           'id',
+//           'name',
+//           'description',
+//           'date_created',
+//         ],
+//       },
+//     ]
+//     });
 
-    const reviews = reviewData.get({ plain: true });
+//     const review = reviewData.get({ plain: true });
 
-    res.render('review', {
-      ...this.review,
-      logged_in: req.session.logged_in
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     res.render('review', {
+//       ...this.review,
+//       logged_in: req.session.logged_in
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 // Use withAuth middleware to prevent access to route
 router.get('/review', withAuth, async (req, res) => {
@@ -92,10 +86,9 @@ router.get('/review', withAuth, async (req, res) => {
   }
 });
 
-
-router.get('/review', async (req, res) => { 
-  try{
-  const reviewData = await Review.findAll(
+// router.get('/review', async (req, res) => { 
+//   try{
+//   const reviewData = await Review.findAll(
   
   // include: [
   //   {
@@ -103,18 +96,50 @@ router.get('/review', async (req, res) => {
   //     attributes: ['name'],
   //   },
   // ],
-);
+// );
 // Serialize data so the template can read it
-const reviews = reviewData.map((review) => review.get({ plain: true }));
-
+// const reviews = reviewData.map((review) => review.get({ plain: true }));
   
-res.render('review',{ 
-  reviews, 
-   logged_in: req.session.logged_in });
-}catch (err) {
-  res.status(500).json(err);
-}
+// res.render('review',{ 
+//   reviews, 
+//    logged_in: req.session.logged_in });
+// }catch (err) {
+//   res.status(500).json(err);
+// }
 
-});
+// });
+
+// module.exports = router;
+
+
+/******************************************************************************************************************************** */
+
+// const router = require('express').Router();
+// const Dish = require('../models/Dish');
+const {User, Review } = require('../models');
+
+// route to get all reviews
+router.get('/', async (req, res) => {
+    const reviewData = await Review.findAll().catch((err) => { 
+        res.json(err);
+      });
+        const reviews = reviewData.map((review) => review.get({ plain: true }));
+        res.render('all', { reviews });
+      });
+  
+  // route to get one review
+  router.get('/review/:id', async (req, res) => {
+    try{ 
+        const reviewData = await Review.findByPk(req.params.id);
+        if(!reviewData) {
+            res.status(404).json({message: 'No review with this id!'});
+            return;
+        }
+        const review = reviewData.get({ plain: true });
+        res.render('review', review);
+      } catch (err) {
+          res.status(500).json(err);
+      };     
+  });
 
 module.exports = router;

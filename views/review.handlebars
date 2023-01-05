@@ -1,4 +1,4 @@
-<main class="container-fluid my-3">
+{{!-- <main class="container-fluid my-3">
         <h1 class="text-center">Rose to Rough</h1>
         <h5 class="text-center mt-4">Add your review</h5>
         <form>
@@ -43,4 +43,76 @@
             <button type="submit" class="btn btn-danger mt-3">Submit</button>
           </form>
      
-    </main>
+    </main> --}}
+
+    <div class="review-card">
+  <div class="review-card-header">
+    {{title}}
+  </div>
+  <div class="card-body">
+    <p>
+      Description:
+      {{description}}
+    </p>
+    <p>
+      Guest:
+      {{taster_name}}
+    </p>
+    {{#if is_twenty_one}}
+      <p class="is-twenty-one">
+        You are 21 yrs. please submit your review
+      </p>
+    {{/if}}
+  </div>
+</div>
+
+<!-- This is the form for updating a review. According to MVC framework, what is this form responsible for? -->
+<!-- This form is responsible for the UI logic, or the components in the View that the user will interact with. -->
+<!--What isn't it responsible for? -->
+<!--It is not responsible for data-related logic, requests, or business-logic. -->
+
+<div class="edit-review-container">
+  <h2>
+    Update Review
+  </h2>
+  <form class="edit-review-form">
+    <label for="title">
+      Wine Name:
+    </label>
+    <br />
+    <textarea id="title" name="wine_name" rows="2" cols="30">
+      {{title}}
+    </textarea>
+    <br />
+    <label for="description">
+      Description:
+    </label>
+    <br />
+    <textarea id="description" name="description" rows="5" cols="30">
+      {{description}}
+    </textarea>
+    <br />
+    <label for="taster_name">
+      Guest Name:
+    </label>
+    <br />
+    <textarea id="taster_name" name="taster_name" rows="2" cols="30">
+      {{taster_name}}
+    </textarea>
+    <br />
+    <br />
+    <input type="checkbox" id="has_nuts" name="has_nuts" value="true" />
+    <label for="is_twenty_one">
+      Check box if your 21 yrs. or Older
+    </label>
+    <br />
+    <button type="submit" value="Submit">
+      Submit
+    </button>
+  </form>
+</div>
+<script src="/js/edit-review.js"></script>
+
+    
+
+    

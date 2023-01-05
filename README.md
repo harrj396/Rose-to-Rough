@@ -6,7 +6,7 @@
 
 ## Description
 
-noRose to Rough is wine review application users can see post of many options and variety of wines. The main problem it solves it allows users to signup and login and leave a review of a wine they like.
+Rose to Rough is wine review application users can see post of many options and variety of wines. The main problem it solves it allows users to signup and login and leave a review of a wine they like.
 
 Project Requirements
 
@@ -70,7 +70,11 @@ While building this project I learned to:
 ### Built With
 
 [![Node.js Shield](https://img.shields.io/badge/Node.js-339933?&style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/en/) 
-[![Express Shield](https://img.shields.io/badge/Express-000000?&style=for-the-badge&logo=express&logoColor=white)](http://expressjs.com/) [![Handlebars Shield](https://img.shields.io/badge/Handlebars-E34F26?&style=for-the-badge&logo=handlebars.js&logoColor=white)](https://handlebarsjs.com/) [![mySQL Shield](https://img.shields.io/badge/mySQL-4479A1?&style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![Express Shield](https://img.shields.io/badge/Express-000000?&style=for-the-badge&logo=express&logoColor=white)](http://expressjs.com/) 
+[![Handlebars Shield](https://img.shields.io/badge/Handlebars-E34F26?&style=for-the-badge&logo=handlebars.js&logoColor=white)](https://handlebarsjs.com/)
+[![mySQL Shield](https://img.shields.io/badge/mySQL-4479A1?&style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
+
 
 ## Table of Contents
 - [Installation](#installation)
@@ -88,6 +92,21 @@ Add a comment about installing your project. For example that your project will 
 ```
 git clone https://github.com/harrj396/Rose-to-Rough
 ```
+
+### Features:
+
+This application has the following features:
+User can search for a wine by entering the wine's name or by clicking on any of the three wines in the home page
+The application displays all wines with similar names from different countries
+The application also displays a list of recommended wine for travellers who have not decided their wine
+For each searched wine, the application shows the date, Variety, Country of origin, Grape designation, Wine Score, and price
+The application provides a feature for users to save their favourite wines/ saved in local storage so they can access it quickly later by clicking on favourites button
+ 
+
+### User Story:
+
+As a user looking for a wine, I would like an application that allows me to see and reviews wines, as well as interact with posts from other users. When I am on the homepage, I am presented with a list of reviews in an easy-to-navigate area. When looking for potential wines to sample , I am presented with suggestions to help inform my decision.
+
 2. Screenshot Example
 
 ![example](/public/images/Screenshot%20HomePg.png)

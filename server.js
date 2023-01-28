@@ -32,17 +32,19 @@ const sess = {
     db: sequelize
   })
 };
-
+// App level middleware
 app.use(session(sess));
 
-// Inform Express.js on which template engine to use
+// App level middleware to Inform Express.js -- which template engine to use
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+// App level middleware -- for body parsing
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// App level middleware -- for routing
 app.use(routes);
 
 app.get('/', (req, res) => {

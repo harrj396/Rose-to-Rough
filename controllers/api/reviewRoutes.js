@@ -78,7 +78,7 @@ router.delete('/:id', withAuth, async (req, res) => {
 
 /********************************************************************************************************************************** */
 
-// route to create/add a dish
+// route to create/add a review
 router.post('/', async (req, res) => {
   try {
     const reviewData = await Review.create({
@@ -98,8 +98,7 @@ router.post('/', async (req, res) => {
 router.put('/:id', async (req, res) => {
   // Where is this action method sending the data from the body of the fetch request? Why?
   // It is sending the data to the Model so that one dish can be updated with new data in the database.
-  try {
-    const review = await Review.update(
+    const updatedReview = await Review.update(
       {
         title: req.body.title,
         description: req.body.description,
@@ -112,12 +111,14 @@ router.put('/:id', async (req, res) => {
         },
       }
     );
+
+    res.json(updatedReview);
     // If the database is updated successfully, what happens to the updated data below?
-    // The updated data (dish) is then sent back to handler that dispatched the fetch request.
-    res.status(200).json(review);
-  } catch (err) {
-    res.status(500).json(err);
-  }
+    // The updated data (review) is then sent back to handler that dispatched the fetch request.
+  //   res.status(200).json(review);
+  //   res.status(500).json(err);
+  // }
+  
 });
 
 module.exports = router;

@@ -1,8 +1,12 @@
 <body>
 
   <main class="container-fluid my-3">
-    
-
+      <div class="menu-container">
+      <div class="card-header col-md-12 text-center">
+        <h2>
+          &#127863 Current Wine Review &#127863
+        </h2>
+      </div>
     <div id="reviews" class="row">
       <section class="col-12 col-md-4">
         <div class="container">
@@ -74,29 +78,6 @@
         </div>
       </section>
 
-      {{!-- <div class="position-absolute top-50 start-50 bottom-50 translate-middle">
-    <a href="/review">
-      <button id="review" class="btn btn-danger">Leave a Review</button>
-    </a>
-  </div> --}}
-        {{!-- <form>
-            <div class="form-group mt-3">
-                <label for="new-review-form">Enter the country the wine is from</label>
-                <textarea class="form-control" id="new-review-form" rows="1"></textarea>
-              </div>
-             
-              <div class="form-group mt-3">
-                <label for="exampleFormControlTextarea1">Enter your review/description of the wine here</label>
-                <textarea class="form-control" id="new-review-form" rows="3"></textarea>
-              </div>
-        </form> --}}
-
-      <div class="menu-container">
-  <div class="card-header col-md-12 text-center">
-    <h2>
-      &#127863 Current Wine Review &#127863
-    </h2>
-  </div>
   {{#each reviews as |review|}}
   <div class="dish col-md-4">
     <p>

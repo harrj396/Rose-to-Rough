@@ -4,8 +4,8 @@ const reviewRoutes = require('./reviewRoutes');
 // const pairingRoutes = require('./pairingRoutes')
 const winelistRoutes = require('./winelistRoutes');
 
-router.use('/users', userRoutes);
-router.use('/reviews', reviewRoutes);
+router.use('/user', userRoutes);
+router.use('/review', reviewRoutes);
 router.use('/winelist', winelistRoutes);
 // router.use('/pairing', pairingRoutes);
 

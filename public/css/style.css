@@ -1,7 +1,9 @@
 body {
     color: #B82A23 !important;
     font-family: 'Montserrat', sans-serif !important;
-  background-image: url(../images/grapes-and-wine.jpg);
+    background-image: url(../images/oilPaint_vineyard.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
 }
 
 nav {

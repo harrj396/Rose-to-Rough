@@ -1,10 +1,83 @@
-<body>
+<div class="menu-container">
+  <div class="card-header col-md-10">
+    <h2>
+      &#127863 Current Wines 
+    </h2>
+  </div>
+</div>
+
+  {{#each reviews as |review|}}
+  <div class="dish col-md-4">
+    <p>
+      {{review.id}}.
+      {{review.title}}
+    </p>
+  </div>
+  <div class="col-md-5">
+    <p>
+      Guest:
+      {{review.taster_name}}
+    </p>
+  </div>
+  <div class="col-md-3">
+    	&#128286: {{#if review.is_twenty_one}} Old enough to sample the wine {{else}} Not 21 yet! {{/if}}
+  </div>
+  {{/each}}
+  <!-- This is the form for adding a new dish -->
+  <div class="add-dish-container">
+    <h2>
+      Write a review for your favorite wines!
+    </h2>
+    <form class="new-wine-form">
+      <label for="wine_name">
+        Wine Name:
+      </label>
+      <br />
+      <textarea id="wine_name" name="wine_name" rows="2" cols="30">
+      {{title}}
+    </textarea>
+      <br />
+      <label for="description">
+        Description:
+      </label>
+      <br />
+      <textarea id="description" name="description" rows="5" cols="30">
+      {{description}}
+    </textarea>
+      <br />
+      <label for="taster_name">
+        Taster Name:
+      </label>
+      <br />
+      <textarea id="taster_name" name="taster_name" rows="2" cols="30">
+      {{taster_name}}
+    </textarea>
+      <br />
+      <br />
+      {{#if is_twenty_one}}
+      <input type="checkbox" id="is_twenty_one" name="is_twenty_one" checked />
+      {{else}}
+      <input type="checkbox" id="is_twenty_one" name="is_twenty_one" />
+      {{/if}}
+      <label for="is_twenty_one">
+        Check box if you are older than 21 
+      </label>
+      <br />
+      <button type="submit" value="Submit">
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+
+
+
 
   <main class="container-fluid my-3">
       <div class="menu-container">
       <div class="card-header col-md-12 text-center">
         <h2>
-          &#127863 Current Wine Review &#127863
+          &#127863 Wine Enthusiast Reviews
         </h2>
       </div>
     <div id="reviews" class="row">
@@ -78,69 +151,7 @@
         </div>
       </section>
 
-  {{#each reviews as |review|}}
-  <div class="dish col-md-4">
-    <p>
-      {{review.id}}.
-      {{review.title}}
-    </p>
-  </div>
-  <div class="col-md-5">
-    <p>
-      Guest:
-      {{review.taster_name}}
-    </p>
-  </div>
-  <div class="col-md-3">
-    	&#128286: {{#if review.is_twenty_one}} Old enough to sample the wine {{else}} Not 21 yet! {{/if}}
-  </div>
-  {{/each}}
-  <!-- This is the form for adding a new dish -->
-  <div class="add-dish-container">
-    <h2>
-      Write a review for your favorite wines!
-    </h2>
-    <form class="new-wine-form">
-      <label for="wine_name">
-        Wine Name:
-      </label>
-      <br />
-      <textarea id="wine_name" name="wine_name" rows="2" cols="30">
-      {{title}}
-    </textarea>
-      <br />
-      <label for="description">
-        Description:
-      </label>
-      <br />
-      <textarea id="description" name="description" rows="5" cols="30">
-      {{description}}
-    </textarea>
-      <br />
-      <label for="taster_name">
-        Taster Name:
-      </label>
-      <br />
-      <textarea id="taster_name" name="taster_name" rows="2" cols="30">
-      {{taster_name}}
-    </textarea>
-      <br />
-      <br />
-      {{#if is_twenty_one}}
-      <input type="checkbox" id="is_twenty_one" name="is_twenty_one" checked />
-      {{else}}
-      <input type="checkbox" id="is_twenty_one" name="is_twenty_one" />
-      {{/if}}
-      <label for="is_twenty_one">
-        Check box if you are older than 21 
-      </label>
-      <br />
-      <button type="submit" value="Submit">
-        Submit
-      </button>
-    </form>
-  </div>
-</div>
+
 
 <script src="/js/add-review.js"></script>
 

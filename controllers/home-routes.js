@@ -1,7 +1,30 @@
 const router = require('express').Router();
-const {User, Review } = require('../models');
+const { User, Review } = require('../models');
 const withAuth = require('../utils/auth');
 
+
+const wines = [
+  {
+  "title": "Homewood",
+  "taster-name": "Ana Dasilva",
+  "country": "US",
+  "variety": "Zinfandel Port",
+  "winery": "Homewood Winery",
+  "province": "Sonoma",
+  "region_1": "Sonoma Country",
+  "description": "An amazing port with aromas and flavors of dark skinned summer time fruits that you eat over the sink. Pair it with a chocolate raspberry torte and your favorite vanilla ice cream"
+},
+{
+  "title": "Fuentevina",
+  "taster-name": "Oliver",
+  "country": "Spain",
+  "variety": "Cabernet Sauvignon",
+  "winery": "Fuentevina Winery",
+  "province": "Castilla y Leon",
+  "region_1": " Extremadura region of Spain",
+  "description": "Fresh citrus fruit flavors lead on the palate with a nice underlying note of tropical fruit."
+}
+]
 router.get('/', async (req, res) => {
   try {
     // Get all post and JOIN with user data
@@ -43,7 +66,7 @@ router.get('/reviews', withAuth, async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
-router.get('/winelist/:id', withAuth, async (req, res) => {
+router.get('/review/:id', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
@@ -62,7 +85,7 @@ router.get('/winelist/:id', withAuth, async (req, res) => {
     });
 
     if (review) {
-      res.render('winelist', review);
+      res.render('', review);
     } else {
       res.status(404).json({
         message: `A review with id: ${req.params.id} does not exist`,
@@ -177,6 +200,8 @@ router.get('/', async (req, res) => {
       res.render('all', { reviews });
     });
 
-
+router.get('/', async (req, res) => {
+  res.render('all', { wines });
+});
 
 module.exports = router;

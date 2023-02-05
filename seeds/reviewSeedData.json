@@ -1,53 +1,21 @@
 [
   {
-    "country": "US",
-    "description": "Notes of tobacco mingle with exploding raspberry tones. Great with steak, burgers and mild cheeses.",
-    "designation": "",
-    "title": "Habersham",
-    "taster-name": "Oliver Lopez",
-    "variety": "Cabernet Sauvignon",
-    "winery": "Habersham Vineyards",
-    "province": "Georgia",
-    "region_1": "Helen Georgia"
+    "wine_name": "Habersham"
   },
   {
-    "title": "Montaluce",
-    "taster-name": "Zoraida Lopez",
-    "country": "US",
-    "variety": "Malbec",
-    "winery": "Montaluce Vineyards",
-    "province": "Georgia",
-    "region_1": "Dahlonega Plateau",
-    "description": "Medium dark in color and with varietally true aromas of blackberries, cocoa, eucalyptus and bell pepper. It has stout tannins and a full mouth feel that leads to a long, smooth finish. This wine will age very well for years to come."
+    "wine_name": "Monteluce"
   },
   {
-    "title": "Peter Cellars",
-    "taster-name": "Justin",
-    "country": "US",
-    "variety": "Rose of Pinot Noir",
-    "winery": "Peter Cellars Winery",
-    "province": "Sonoma",
-    "region_1": "Sonoma California",
-    "description": "This lively rose, made from predominantly the south block of our pinot noir,vineyard  has fragrant aromas of fresh strawberries and orange zest, with wisps of cherry blossom. The flavors are soft and round."
+    "wine_name": "Peters Cellars"
   },
   {
-    "title": "NV CaliW Blend",
-    "taster-name": "Jacob Harris",
-    "country": "US",
-    "variety": "Blend",
-    "winery": "Ru Vango Winery",
-    "province": "Napa Valley",
-    "region_1": "Spring Mountain & Carneros",
-    "description": "Hints of Black licorice and spice."
+    "wine_name": "Homewood"
   },
   {
-    "title": "Homewood",
-    "taster-name": "Ana Dasilva",
-    "country": "US",
-    "variety": "Zinfandel Port",
-    "winery": "Homewood Winery",
-    "province": "Sonoma",
-    "region_1": "Sonoma Country",
-    "description": "An amazing port with aromas and flavors of dark skinned summer time fruits that you eat over the sink. Pair it with a chocolate raspberry torte and your favorite vanilla ice cream"
+    "wine_name": "NV CaliW Blend"
   }
 ]
+
+
+
+

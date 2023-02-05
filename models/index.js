@@ -1,14 +1,25 @@
 const User = require('./User');
 const Review = require('./Review');
+const Wine = require('./Wine');
 
-// Define a User as having many review, thus creating a foreign key in the 
-// 'review' table
-User.hasMany(Review, {
-  foreignKey: 'user_id'
+User.belongsToMany(Review, {
+  // Define the third table needed to store the foreign keys
+  through: {
+    model: Wine,
+    unique: false
+  },
+  // Define an alias for when data is retrieved
+  as: 'planned_wines'
 });
 
-Review.belongsTo(User, {
-  foreignKey: 'user_id'
+Review.belongsToMany(User, {
+  // Define the third table needed to store the foreign keys
+  through: {
+    model: Wine,
+    unique: false
+  },
+  // Define an alias for when data is retrieved
+  as: 'review_users'
 });
 
-module.exports = { User, Review };
+module.exports = { User, Review, Wine };

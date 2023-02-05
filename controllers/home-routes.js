@@ -2,28 +2,27 @@ const router = require('express').Router();
 const { User, Review } = require('../models');
 const withAuth = require('../utils/auth');
 
-
 const wines = [
+    {
+    "title": "Homewood",
+    "taster-name": "Ana Dasilva",
+    "country": "US",
+    "variety": "Zinfandel Port",
+    "winery": "Homewood Winery",
+    "province": "Sonoma",
+    "region_1": "Sonoma Country",
+    "description": "An amazing port with aromas and flavors of dark skinned summer time fruits that you eat over the sink. Pair it with a chocolate raspberry torte and your favorite vanilla ice cream"
+  },
   {
-  "title": "Homewood",
-  "taster-name": "Ana Dasilva",
-  "country": "US",
-  "variety": "Zinfandel Port",
-  "winery": "Homewood Winery",
-  "province": "Sonoma",
-  "region_1": "Sonoma Country",
-  "description": "An amazing port with aromas and flavors of dark skinned summer time fruits that you eat over the sink. Pair it with a chocolate raspberry torte and your favorite vanilla ice cream"
-},
-{
-  "title": "Fuentevina",
-  "taster-name": "Oliver",
-  "country": "Spain",
-  "variety": "Cabernet Sauvignon",
-  "winery": "Fuentevina Winery",
-  "province": "Castilla y Leon",
-  "region_1": " Extremadura region of Spain",
-  "description": "Fresh citrus fruit flavors lead on the palate with a nice underlying note of tropical fruit."
-}
+    "title": "Fuentevina",
+    "taster-name": "Oliver",
+    "country": "Spain",
+    "variety": "Cabernet Sauvignon",
+    "winery": "Fuentevina Winery",
+    "province": "Castilla y Leon",
+    "region_1": " Extremadura region of Spain",
+    "description": "Fresh citrus fruit flavors lead on the palate with a nice underlying note of tropical fruit."
+  }
 ]
 router.get('/', async (req, res) => {
   try {
@@ -163,33 +162,6 @@ router.get('/signup', (req, res) => {
       };     
   });
 
-// router.get('/review', async (req, res) => { 
-//   try{
-//   const reviewData = await Review.findAll(
-  
-  // include: [
-  //   {
-  //     model: User,
-  //     attributes: ['name'],
-  //   },
-  // ],
-// );
-// Serialize data so the template can read it
-// const reviews = reviewData.map((review) => review.get({ plain: true }));
-  
-// res.render('review',{ 
-//   reviews, 
-//    logged_in: req.session.logged_in });
-// }catch (err) {
-//   res.status(500).json(err);
-// }
-
-// });
-
-// module.exports = router;
-
-
-/******************************************************************************************************************************** */
 
 // route to get all reviews
 router.get('/', async (req, res) => {

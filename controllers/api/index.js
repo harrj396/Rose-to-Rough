@@ -1,12 +1,10 @@
 const router = require('express').Router();
 const userRoutes = require('./userRoutes');
 const reviewRoutes = require('./reviewRoutes');
-// const pairingRoutes = require('./pairingRoutes')
-const winelistRoutes = require('./winelistRoutes');
 
-router.use('/user', userRoutes);
-router.use('/review', reviewRoutes);
-router.use('/winelist', winelistRoutes);
-// router.use('/pairing', pairingRoutes);
+router.use('/users', userRoutes);
+router.use('/wines', wineRoutes);
+router.use('/reviews', reviewRoutes);
+
 
 module.exports = router;

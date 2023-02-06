@@ -92,16 +92,20 @@ Add a comment about installing your project. For example that your project will 
 ```
 git clone https://github.com/harrj396/Rose-to-Rough
 ```
-Install Dependencies
 
-All NPM packages required for this application (Express.js, Node.js, Mongoose, MySQL and the Sequelize ORM) are already listed as dependencies in the package.json file. Run the command 'npm i' command in your terminal at the root directory level to install the packages.
-Ensure you have Node.js installed on your machine. The Rose to Rough application will be invoked by entering node server.js in the command line.
+### Features:
 
-Start Application
+This application has the following features:
+User can search for a wine by entering the wine's name or by clicking on any of the three wines in the home page
+The application displays all wines with similar names from different countries
+The application also displays a list of recommended wine for travellers who have not decided their wine
+For each searched wine, the application shows the date, Variety, Country of origin, Grape designation, Wine Score, and price
+The application provides a feature for users to save their favourite wines/ saved in local storage so they can access it quickly later by clicking on favourites button
+ 
 
-You will see App running on port 3000! in the console. You can then view the app on http://localhost:3000/.
+### User Story:
 
-Finally, to make your profile Employer Competitive, add a headline. For your  headline, try to make it catchy and unique to you. For example: “Web  Developer + Creative Thinker” or “UX-Focused Web Developer” is a  little more interesting and informative than just “Web Developer”. 
+As a user looking for a wine, I would like an application that allows me to see and reviews wines, as well as interact with posts from other users. When I am on the homepage, I am presented with a list of reviews in an easy-to-navigate area. When looking for potential wines to sample , I am presented with suggestions to help inform my decision.
 
 2. Screenshot Example
 

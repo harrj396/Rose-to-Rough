@@ -5,7 +5,7 @@ const { Review, User, Wine } = require("../models");
 // we haven't yet set up a database or Sequelize in our app
 const reviews = [
   {
-    id: 1,
+    id: 11,
     title: "Homewood",
     taster_name: "Ana Dasilva",
     country: "US",
@@ -17,7 +17,7 @@ const reviews = [
       "An amazing port with aromas and flavors of dark skinned summer time fruits that you eat over the sink. Pair it with a chocolate raspberry torte and your favorite vanilla ice cream",
   },
   {
-    id: 2,
+    id: 12,
     title: "Fuentevina",
     taster_name: "Oliver",
     country: "Spain",
@@ -41,7 +41,7 @@ router.get("/review/:id", async (req, res) => {
 });
 
 // CREATE a review
-router.post("/", async (req, res) => {
+router.post("/review", async (req, res) => {
   try {
     const reviewData = await Review.create(req.body);
     res.status(200).json(reviewData);

@@ -38,21 +38,20 @@
         </li>
       </ol>
     </div>
-</div>
 
   {{#each reviews as |review|}}
-  <div class="review row-md-4">
+  <div class="review col-md-5">
     <p>
       {{review.id}}.
       {{review.title}}
     </p>
   </div>
-  <div class="row-sm-2">
+  <div class="row-md-2">
     <p>
       Guest:
       {{review.taster_name}}
     </p>
   </div>
   {{/each}}
-
+</div>
   

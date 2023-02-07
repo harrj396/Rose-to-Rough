@@ -11,20 +11,103 @@
       Guest:
       {{taster_name}}
     </p>
+    <!-- This is where we initiate the #if helper with is-twenty-one set as the condition -->
     {{#if is_twenty_one}}
+    <!-- This code will be rendered if the condition (is-twenty-one) is truthy -->
       <p class="is-twenty-one">
         You are 21 yrs. please submit your review
       </p>
+    <!-- Below, we end the #if helper -->
     {{/if}}
   </div>
 </div>
+
+<main class="container-fluid my-3">
+      <div class="menu-container">
+      <div class="card-header row-md-12 text-center">
+        <h2>
+          &#127863 Wine Enthusiast Reviews
+        </h2>
+      </div>
+    <div id="reviews" class="row">
+      <section class="col-12 row-md-4">
+        <div class="container">
+          <div class="row">
+            <div class="card m-4 bg-light" style="width: 19rem;">
+              <div class="card-body">
+                <h3 class="card-title">{{reviews.0.title}}</h3>
+                <h4 class="card-subtitle mb-2 text-muted">{{reviews.0.winery}}</h4>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Review: {{reviews.0.description}}</li>
+                <li class="list-group-item">Variety: {{reviews.0.variety}}</li>
+                <li class="list-group-item">Country of origin: {{reviews.0.country}}</li>
+                <li class="list-group-item">Grape designation: {{reviews.0.designation}}</li>
+                <li class="list-group-item">Score: {{reviews.0.points}} / 100</li>
+                <li class="list-group-item">Price: ${{reviews.0.price}}</li>
+                <li class="list-group-item">Province: {{reviews.0.province}}</li>
+                <li class="list-group-item">Region: {{reviews.0.region_1}}</li>
+                <li class="list-group-item">Sommelier: {{reviews.0.taster_name}}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="col-12 row-md-4">
+         <div class="container">
+          <div class="row">
+            <div class="card m-4 bg-light" style="width: 19rem;">
+              <div class="card-body">
+                <h3 class="card-title">{{reviews.1.title}}</h3>
+                <h4 class="card-subtitle mb-2 text-muted">{{reviews.1.winery}}</h4>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Review: {{reviews.1.description}}</li>
+                <li class="list-group-item">Variety: {{reviews.1.variety}}</li>
+                <li class="list-group-item">Country of origin: {{reviews.1.country}}</li>
+                <li class="list-group-item">Grape designation: {{reviews.1.designation}}</li>
+                <li class="list-group-item"> Score: {{reviews.1.points}} / 100</li>
+                <li class="list-group-item">Price: ${{reviews.1.price}}</li>
+                <li class="list-group-item">Province: {{reviews.1.province}}</li>
+                <li class="list-group-item">Region: {{reviews.1.region_1}}</li>
+                <li class="list-group-item">Sommelier: {{reviews.1.taster_name}}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="col-12 col-md-4">
+         <div class="container">
+          <div class="row">
+            <div class="card m-4 bg-light" style="width: 19rem;">
+              <div class="card-body">
+                <h3 class="card-title">{{reviews.2.title}}</h3>
+                <h4 class="card-subtitle mb-2 text-muted">{{reviews.2.winery}}</h4>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Review: {{reviews.2.description}}</li>
+                <li class="list-group-item">Variety: {{reviews.2.variety}}</li>
+                <li class="list-group-item">Country of origin: {{reviews.2.country}}</li>
+                <li class="list-group-item">Grape designation: {{reviews.2.designation}}</li>
+                <li class="list-group-item">Score: {{reviews.2.points}} / 100</li>
+                <li class="list-group-item">Price: ${{reviews.2.price}}</li>
+                <li class="list-group-item">Province: {{reviews.2.province}}</li>
+                <li class="list-group-item">Region: {{reviews.2.region_1}}</li>
+                <li class="list-group-item">Sommelier: {{reviews.2.taster_name}}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+{{!-- <script src="/js/add-review.js"></script>   --}}
 
 <!-- This is the form for updating a review. According to MVC framework, what is this form responsible for? -->
 <!-- This form is responsible for the UI logic, or the components in the View that the user will interact with. -->
 <!--What isn't it responsible for? -->
 <!--It is not responsible for data-related logic, requests, or business-logic. -->
 
-<div class="edit-review-container">
+{{!-- <div class="edit-review-container">
   <h2>
     Update Review
   </h2>
@@ -65,8 +148,9 @@
   </form>
 </div>
 
-<script src="/js/edit-review.js"></script>
+<script src="/js/edit-review.js"></script> --}}
 
-    
+
+  
 
     

@@ -1,24 +1,25 @@
 const User = require('./User');
 const Review = require('./Review');
-const License = require('./License');
+const Wine = require('./Wine');
 
-User.hasOne(License, {
-  foreignKey: 'user_id',
-  onDelete: 'CASCADE',
+User.belongsToMany(Review, {
+  // Define the third table needed to store the foreign keys
+  through: {
+    model: Wine,
+    unique: false
+  },
+  // Define an alias for when data is retrieved
+  as: 'planned_wines'
 });
 
-License.belongsTo(User, {
-  foreignKey: 'user_id',
+Review.belongsToMany(User, {
+  // Define the third table needed to store the foreign keys
+  through: {
+    model: Wine,
+    unique: false
+  },
+  // Define an alias for when data is retrieved
+  as: 'review_users'
 });
 
-// Define a User as having many review, thus creating a foreign key in the 
-// 'review' table
-User.hasMany(Review, {
-  foreignKey: 'user_id'
-});
-
-Review.belongsTo(User, {
-  foreignKey: 'user_id'
-});
-
-module.exports = { User, Review, License };
+module.exports = { User, Review, Wine };

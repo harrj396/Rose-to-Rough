@@ -1,51 +1,173 @@
-body {
-    color: #B82A23 !important;
-    font-family: 'Montserrat', sans-serif !important;
-  background-image: url(../images/grapes-and-wine.jpg);
-}
+:root {
+    --primary:  #380D0B;
+    --secondary:  #B82A23;
+    --tertiary: #fa7f72;
+    --quatrinary: #6c6b67;
+    --light: #ebebeb;
+    --dark: #182c23;
+    --error: rgb(228, 46, 1);
+    --border-radius: 0.3rem;
+  }
+  
+  body {
+    font-family: Arial;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
+    background-color: var(--quatrinary);
+    background-image: url(../images/oilPaint_vineyard.jpg);
+    background-repeat: no-repeat;
+    background-size: 1920px 1000px;
+  }
+  
+  header {
+    padding: 40px;
+    text-align: center;
+    background: var(--primary);
+    color: var(--secondary);
+    border-bottom-style: solid;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+  
+  aside {
+    flex: 0;
+    background-color: var(--tertiary);
+    padding: 80px;
+    text-align: left;
+    color: var(--light);
+  }
+  
+  nav {
+    display: flex;
+    background-color: var(--secondary);
+  }
+  
+  .menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    min-height: 100%;
+    margin: 0px auto;
+    border: 3px solid var(--primary);
+    border-radius: var(--border-radius);
+    border-style: solid;
+    border-width: medium;
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 50px;
+    background-color: #ebebeb;
+  }
+  
+  .add-dish-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 35%;
+    min-height: 100%;
+    min-width: 35%;
+    margin: 5px auto;
+    border: 3px solid var(--primary);
+    border-radius: var(--border-radius);
+    border-style: solid;
+    border-width: medium;
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 50px;
+    text-align: center;
+    background-color: var(--tertiary);
+  }
+  
+  .edit-dish-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 35%;
+    min-height: 100%;
+    min-width: 35%;
+    margin: 5px auto;
+    border: 3px solid var(--primary);
+    border-radius: var(--border-radius);
+    border-style: solid;
+    border-width: medium;
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 50px;
+    text-align: center;
+    background-color: var(--tertiary);
+  }
+  
+  /* CARDS */
+  .dish-card {
+    margin: 20px;
+    flex: 0 1 300px;
+    padding: 5px;
+    width: 35%;
+    min-height: 100%;
+    min-width: 35%;
+    border: 3px solid var(--primary);
+    border-radius: var(--border-radius);
+    border-style: solid;
+    border-width: medium;
+    background-color: var(--light);
+    color: var(--dark);
+  }
+  
+  .menu-card {
+    margin: 50px;
+    flex: 0 1 300px;
+    padding: 5px;
+    border: 3px solid var(--dark);
+    border-radius: var(--border-radius);
+    border-style: groove;
+    border-width: thick;
+    background-color: var(--light);
+    color: var(--dark);
+  }
+  
+  .card-header {
+    color: var(--light);
+    margin: 0;
+    background-color: var(--secondary);
+    padding: 0.625rem;
+    border: 3px solid var(--primary);
+    border-radius: var(--border-radius);
+    border-style: solid;
+    border-width: medium;
+  }
 
-nav {
-    background-color:aliceblue;
-    border-radius: 10px;
-}
+  .has-nuts {
+    color: var(--error)
+  }
 
-nav a {
-    color: #B82A23 !important;
-    font-family: 'Playfair Display', serif;
-    font-size: 30px !important;
-}
-
-#review {
-    padding: 15px;
-    font-size: 30px;
-    margin-left: 42vw;
-    margin-top: 51vh;
-}
-
-.form-group {
-    font-size: 21px !important;
-    color: #380D0B;
-    font-family: 'Playfair Display', serif;
-}
-
-h1 {
-    font-family: 'Kanit', sans-serif;
-    
-}
-
-.h1s {
-    margin-left: 6vw;
-}
-
-h5 {
-    font-family: 'Playfair Display', serif;
-}
-
-.git { 
-    margin-top: 24vh;
-}
-
-@media (max-width: 768px) { 
+  .dish-card-header {
+    font-size: 1.5rem;
+    color: var(--tertiary);
+    margin: 0;
+    background-color: var(--light);
+    padding: 0.625rem;
+    border-bottom-style: solid;
+  }
+  
+  .card-body {
+    padding: 2.5%;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  
+  /* LAYOUT */
+  .container {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start;
+    align-items: center;
+  }
+  
+  @media (max-width: 768px) { 
     #reviewing {
         margin-top: 210vh;
         margin-left: 0vh;

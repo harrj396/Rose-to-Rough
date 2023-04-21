@@ -75,6 +75,7 @@ Review.init(
        type: DataTypes.STRING,
        allowNull: false,
      },
+    // Store a reference of the 'id' of the 'User' that owns this Review
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -82,11 +83,12 @@ Review.init(
         key: 'id',
       },
     },
+    
   },
   {
     sequelize,
     timestamps: true,
-    // freezeTableName: true,
+    freezeTableName: false,
     // underscored: true,
     modelName: 'review',
   }

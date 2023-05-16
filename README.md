@@ -75,6 +75,12 @@ While building this project I learned to:
 [![mySQL Shield](https://img.shields.io/badge/mySQL-4479A1?&style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
 ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 
+## Presentation
+[Slides](https://docs.google.com/presentation/d/1lm-54iM8n6r8AoOGYySX4M_3eFOW2Wurb9nRHukqgQU/edit?usp=sharing)
+
+## Links
+
+https://rose-to-rough.herokuapp.com/
 
 ## Table of Contents
 - [Installation](#installation)

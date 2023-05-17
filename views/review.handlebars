@@ -1,26 +1,4 @@
-<div class="review-card">
-  <div class="review-card-header">
-    {{title}}
-  </div>
-  <div class="card-body">
-    <p>
-      Description:
-      {{description}}
-    </p>
-    <p>
-      Guest:
-      {{taster_name}}
-    </p>
-    <!-- This is where we initiate the #if helper with is-twenty-one set as the condition -->
-    {{#if is_twenty_one}}
-    <!-- This code will be rendered if the condition (is-twenty-one) is truthy -->
-      <p class="is-twenty-one">
-        You are 21 yrs. please submit your review
-      </p>
-    <!-- Below, we end the #if helper -->
-    {{/if}}
-  </div>
-</div>
+
 
 <main class="container-fluid my-3">
       <div class="menu-container">
@@ -76,7 +54,7 @@
           </div>
         </div>
       </section>
-      <section class="col-12 col-md-4">
+      {{!-- <section class="col-12 col-md-4">
          <div class="container">
           <div class="row">
             <div class="card m-4 bg-light" style="width: 19rem;">
@@ -98,7 +76,31 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> --}}
+
+<div class="review-card">
+  <div class="review-card-header">
+    {{title}}
+  </div>
+  <div class="card-body">
+    <p>
+      Description:
+      {{description}}
+    </p>
+    <p>
+      Guest:
+      {{taster_name}}
+    </p>
+    <!-- This is where we initiate the #if helper with is-twenty-one set as the condition -->
+    {{#if is_twenty_one}}
+    <!-- This code will be rendered if the condition (is-twenty-one) is truthy -->
+      <p class="is-twenty-one">
+        You are 21 yrs. please submit your review
+      </p>
+    <!-- Below, we end the #if helper -->
+    {{/if}}
+  </div>
+</div>
 
 {{!-- <script src="/js/add-review.js"></script>   --}}
 

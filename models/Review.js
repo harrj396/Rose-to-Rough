@@ -17,9 +17,11 @@ Review.init(
     },
     points: {
       type: DataTypes.INTEGER,
+      allowNull: false,
     },
     price: {
       type: DataTypes.INTEGER,
+      allowNull: false,
     },
     province: {
       type: DataTypes.STRING,
@@ -27,7 +29,13 @@ Review.init(
     region_1: {
       type: DataTypes.STRING,
     },
+    region_2: {
+      type: DataTypes.STRING,
+    },
     taster_name: {
+      type: DataTypes.STRING,
+    },
+    taster_twitter_handle: {
       type: DataTypes.STRING,
     },
     title: {
@@ -39,42 +47,6 @@ Review.init(
     winery: {
       type: DataTypes.STRING,
     },
-    designation: {
-       type: DataTypes.STRING,
-       allowNull: true,
-     },
-     points: {
-       type: DataTypes.INTEGER,
-       allowNull: false,
-     },
-     price: {
-       type: DataTypes.INTEGER,
-       allowNull: false,
-     },
-     province: {
-       type: DataTypes.STRING,
-       allowNull: false,
-     },
-     region_1: {
-       type: DataTypes.STRING,
-       allowNull: true,
-     },
-     taster_name: {
-       type: DataTypes.STRING,
-       allowNull: false,
-     },
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-     },
-     variety: {
-       type: DataTypes.STRING,
-       allowNull: false,
-     },
-     winery: {
-       type: DataTypes.STRING,
-       allowNull: false,
-     },
     // Store a reference of the 'id' of the 'User' that owns this Review
     user_id: {
       type: DataTypes.INTEGER,
